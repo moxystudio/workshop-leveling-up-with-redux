@@ -1,0 +1,10 @@
+function removeFromArray(state, action) {
+    const { itemIndexToRemove } = action.payload;
+
+    return {
+        items: [
+            ...state.items.slice(0, itemIndexToRemove),
+            ...state.items.slice(itemIndexToRemove + 1),
+        ],
+    };
+}

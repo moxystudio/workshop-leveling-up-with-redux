@@ -1,0 +1,5 @@
+import { createSelector } from 'reselect';
+
+export const getItems = createSelector([
+    (state) => state.items,
+], (items) => items);

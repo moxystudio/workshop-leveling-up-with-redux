@@ -1,0 +1,6 @@
+export const addProduct(item) {
+    return (dispatch) => ({
+        type: 'ADD_PRODUCT',
+        payload: { item },
+    })
+}

@@ -3,11 +3,14 @@
   - "formidable/configurations/es6-react"
 
 "rules":
-  "indent": [2, 2, {"SwitchCase": 1}]
+  "indent": [2, 4, {"SwitchCase": 1}]
   "max-len": 0
   "no-magic-numbers": 0
   "react/prefer-es6-class": 0
   "react/no-multi-comp": 0
+  "filenames/match-regex": 0
+  "filenames/match-exported": 0
+  "filenames/no-index": 0
 
 "env":
   "browser": true,

@@ -1,0 +1,12 @@
+export function loadUserInfoUponLogin() {
+    return (store) => (next) => (action) => {
+        if (action.type === LOGIN) {
+            const { userId } = action.payload;
+
+            store.dispatch(loadUserInfo(userId);
+        }
+
+        // We need to pass the action down to the other middlewares
+        return next(action);
+    };
+}
