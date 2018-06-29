@@ -1,0 +1,14 @@
+.container {
+    margin-top: 100px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+}

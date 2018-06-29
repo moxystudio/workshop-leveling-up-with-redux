@@ -1,0 +1,27 @@
+@import "shared/styles";
+@import "shared/styles/imports/variables.css";
+
+/* ==========================================================================
+   Make the <main> content ocupy the remaining space between the header and footer
+   ========================================================================== */
+
+html,
+body {
+    /* Put background color also in html because of macOS/iOS elastic scroll */
+    background-color: var(--color-alabaster);
+}
+
+.app {
+    position: relative;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+}
+
+.header {
+    flex: 0 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
