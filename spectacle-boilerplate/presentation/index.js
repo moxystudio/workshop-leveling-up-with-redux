@@ -3,8 +3,11 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+    Appear,
     Deck,
     Heading,
+    Layout,
+    Text,
     Slide
 } from "spectacle";
 
@@ -12,6 +15,7 @@ import {
 import createTheme from "spectacle/lib/themes/default";
 
 // Import slides
+import Cover from "./slides/Cover"
 import WhyRedux from "./slides/WhyRedux";
 import ReduxStore from "./slides/ReduxStore";
 import Immutability from "./slides/Immutability";
@@ -20,6 +24,7 @@ import Actions from "./slides/Actions";
 import Middlewares from "./slides/Middlewares";
 import Reducers from "./slides/Reducers";
 import UIData from "./slides/UIData";
+import Coding from "./slides/Coding";
 
 
 // Require CSS
@@ -27,7 +32,8 @@ require("normalize.css");
 
 const theme = createTheme({
     primary: "white",
-    secondary: "#764abcff",
+    //secondary: "#764abcff",
+    secondary: "#2932d3",
     tertiary: "#03A9FC",
     quarternary: "#CECECE"
 }, {
@@ -40,9 +46,7 @@ export default class Presentation extends React.Component {
         return (
             <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
                 <Slide transition={["zoom"]} bgColor="primary">
-                    <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-                        Leveling up your UI using redux
-                    </Heading>
+                    <Cover />
                 </Slide>
                 <Slide bgColor="primary">
                     <WhyRedux.Intro />
@@ -93,6 +97,9 @@ export default class Presentation extends React.Component {
                     <Middlewares.Desc />
                 </Slide>
                 <Slide bgColor="primary">
+                    <Middlewares.Usage />
+                </Slide>
+                <Slide bgColor="primary">
                     <Middlewares.Example01 />
                 </Slide>
                 <Slide bgColor="primary">
@@ -103,6 +110,12 @@ export default class Presentation extends React.Component {
                 </Slide>
                 <Slide bgColor="primary">
                     <Reducers.Example01 />
+                </Slide>
+                <Slide bgColor="primary">
+                    <Reducers.AdvancedDesc />
+                </Slide>
+                <Slide bgColor="primary">
+                    <Reducers.Example02 />
                 </Slide>
                 <Slide bgColor="primary">
                     <UIData.Intro />
@@ -118,6 +131,12 @@ export default class Presentation extends React.Component {
                 </Slide>
                 <Slide bgColor="primary">
                     <UIData.Selectors />
+                </Slide>
+                <Slide bgColor="primary">
+                    <UIData.AdvancedSelectors />
+                </Slide>
+                <Slide transition={["zoom"]} bgColor="primary">
+                    <Coding />
                 </Slide>
             </Deck>
         );

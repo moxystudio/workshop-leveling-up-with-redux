@@ -27,30 +27,29 @@ class Desc extends React.Component {
             <List textColor="secondary">
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        Data that does not change is easier to verify
+                        Asynchronous safe
                     </ListItem>
                 </Appear>
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        Easy and cheap change detection techniques
+                        Data that does not change is easier to verify
+                    </ListItem>
+                </Appear>
+                <Appear>
+                    <ListItem textSize="24" margin="20px 46px">
+                        Cheap change detection techniques
                         “ensuring the computationally expensive process of updating the DOM occurs only when it absolutely has to”
                         - redux.js (shallow compare)
                     </ListItem>
                 </Appear>
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        Asynchronous safe
+                        State changes are a consequence of actions being dispatched, which are registered.
                     </ListItem>
                 </Appear>
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        State is always correct in the terms that nothing can change the state
-                        unless an action is dispatched which you will be aware of.
-                    </ListItem>
-                </Appear>
-                <Appear>
-                    <ListItem textSize="34" margin="20px 0">
-                        Easier to debug (React + Redux DevTools)
+                        Easy to debug (React + Redux DevTools)
                     </ListItem>
                 </Appear>
             </List>

@@ -27,22 +27,22 @@ class Desc extends React.Component {
             <List textColor="secondary">
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        Actions describe updates.
+                        Describe updates.
                     </ListItem>
                 </Appear>
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        Actions contain a type and a payload
+                        Contain a type and a payload
                     </ListItem>
                 </Appear>
                 <Appear>
-                    <ListItem textSize="34" margin="20px 0">
-                        The type must be self explanatory
+                    <ListItem textSize="24" margin="20px 46px">
+                        Type must be self explanatory
                     </ListItem>
                 </Appear>
                 <Appear>
-                    <ListItem textSize="34" margin="20px 0">
-                        The payload contains the changes the action will trigger
+                    <ListItem textSize="24" margin="20px 46px">
+                        Payload contains the changes the action will trigger
                     </ListItem>
                 </Appear>
                 <Appear>

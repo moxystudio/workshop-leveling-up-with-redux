@@ -101,10 +101,23 @@ class Selectors extends React.Component {
     }
 }
 
+class AdvancedSelectors extends React.Component {
+    render() {
+        return (
+            <div>
+                <Heading size={3} lineHeight={1} textColor="quaternary" margin="20px 0">
+                    <Code>TODO - Advanced selectors</Code>
+                </Heading>
+            </div>
+        );
+    }
+}
+
 export default {
     Intro,
     Desc,
     BuildStore,
     Connect,
-    Selectors
+    Selectors,
+    AdvancedSelectors
 };
