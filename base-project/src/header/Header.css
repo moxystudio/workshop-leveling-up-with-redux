@@ -1,0 +1,25 @@
+@import "variables";
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.header {
+    height: var(--layout-header-height);
+    z-index: 5;
+    padding: 10px var(--layout-edge-spacing-x);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-blue);
+}
+
+/* ==========================================================================
+   Logo
+   ========================================================================== */
+
+.logo {
+    color: var(--color-white);
+    font-size: 30px;
+    font-weight: 600;
+}
