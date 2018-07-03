@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Hero from 'shared/components/hero/Hero';
 import styles from './InternalError.css';
 
 class InternalError extends PureComponent {
@@ -22,8 +21,6 @@ class InternalError extends PureComponent {
         return (
             <main className={ styles.internalErrorPage }>
                 <Helmet title="Oops" />
-
-                <Hero small />
                 <div className={ styles.container }>
                     <h1>Oops</h1>
                     <p>Something went really wrong and we were unable to fulfill your request.</p>

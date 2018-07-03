@@ -17,7 +17,7 @@ export default function renderDocument({ helmet, rootHtml, buildManifest, isomor
                 ${helmet.link.toString()}
 
                 <!-- Roboto from Google-->
-                <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600" rel="stylesheet">
 
                 <!-- Load CSS assets -->
                 ${assets.css.map((asset) => `<link data-ssr rel="stylesheet" href="${asset.url}">`).join('\n')}

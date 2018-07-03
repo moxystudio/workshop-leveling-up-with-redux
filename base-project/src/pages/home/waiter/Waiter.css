@@ -1,0 +1,14 @@
+@import "variables";
+
+.waiter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.91;
+    background: var(--color-orange);
+
+    & .title {
+        color: var(--color-white);
+    }
+}

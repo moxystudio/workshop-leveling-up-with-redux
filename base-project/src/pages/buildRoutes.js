@@ -1,6 +1,5 @@
 import nprogress from 'nprogress';
 import homeRoute from './home';
-import aboutRoutes from './about';
 import errorRoutes from './error';
 
 const isClient = typeof window !== 'undefined';
@@ -28,7 +27,6 @@ export default function buildRoutes() {
         path: '/',
         indexRoute: homeRoute(),
         childRoutes: [
-            ...aboutRoutes(loadComponent),
             ...errorRoutes(loadComponent),
         ],
     };

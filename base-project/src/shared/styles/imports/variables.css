@@ -17,6 +17,12 @@
     --color-amaranth: #ed3251;
     --color-violet: #280d45;
     --color-gallery: #ececec;
+    --color-grey: #dddfe7;
+    --color-green: #9bddb5;
+    --color-red: #fe765f;
+    --color-dark-blue: #0c2765;
+    --color-orange: #fe765f;
+    --color-light-grey: #f1f1f1;
 }
 
 /* ==========================================================================
@@ -24,8 +30,8 @@
    ========================================================================== */
 
 :root {
-    --typography-display-font: "Roboto", sans-serif;
-    --typography-text-font: "Roboto", sans-serif;
+    --typography-display-font: "Josefin Sans", sans-serif;
+    --typography-text-font: "Josefin Sans", sans-serif;
 }
 
 /* ==========================================================================
@@ -35,7 +41,7 @@
 :root {
     /* Header
        ============================================= */
-    --layout-header-height: 80px;
+    --layout-header-height: 140px;
 
     /* Spacing around main contents of the website
        ============================================= */
