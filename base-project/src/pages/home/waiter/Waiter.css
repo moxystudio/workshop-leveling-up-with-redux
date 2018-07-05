@@ -5,10 +5,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.91;
-    background: var(--color-orange);
+    background: url("shared/media/images/backgrounds/waiter.jpg") -300px center no-repeat;
 
     & .title {
+        z-index: 1;
         color: var(--color-white);
+        font-size: 27px;
+        font-weight: 600;
+        pointer-events: none;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.91;
+        background: var(--color-orange);
+        background-size: cover;
+    }
+
+    & .waiter-drawer {
+        & .dropdown {
+            width: 100%;
+            height: 22px;
+            margin-bottom: 30px;
+        }
     }
 }

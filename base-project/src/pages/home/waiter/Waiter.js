@@ -10,15 +10,17 @@ class Waiter extends PureComponent {
         super(props);
         this.state = {
             isOpen: false,
+            requestType: 'order',
         };
 
         this.handleOnWaiterHover = this.handleOnWaiterHover.bind(this);
         this.handleOnWaiterLeave = this.handleOnWaiterLeave.bind(this);
+        this.handleRequestChange = this.handleRequestChange.bind(this);
     }
 
     render() {
         const { className } = this.props;
-        const { isOpen } = this.state;
+        const { isOpen, requestType } = this.state;
 
         return (
             <div className={ classNames(styles.waiter, { [className]: className }) }
@@ -30,13 +32,28 @@ class Waiter extends PureComponent {
                 <Drawer className={ styles.waiterDrawer }
                     isOpen={ isOpen }
                     onLeave={ this.handleOnWaiterLeave }>
-                    Waiter
-                    Dropdown Order / Sit
-                    Sit = radius list
-                    Order = form with quantities for each available things
+                    <select className={ styles.dropdown }
+                        value={ requestType }
+                        onChange={ this.handleRequestChange }>
+                        <option value="order">Order</option>
+                        <option value="sit">Sit</option>
+                    </select>
+                    {
+                        requestType === 'order' ?
+                            <div>
+                                Form with quantities for each available plate
+                            </div> :
+                            <div>
+                                Radius list for choosing the table to sit
+                            </div>
+                    }
                 </Drawer>
             </div>
         );
+    }
+
+    handleRequestChange(event) {
+        this.setState({ requestType: event.target.value });
     }
 
     handleOnWaiterHover() {

@@ -14,6 +14,7 @@ class Kitchen extends PureComponent {
 
         this.handleOnKitchenHover = this.handleOnKitchenHover.bind(this);
         this.handleOnKitchenLeave = this.handleOnKitchenLeave.bind(this);
+        this.handleTableChange = this.handleTableChange.bind(this);
     }
 
     render() {
@@ -30,12 +31,23 @@ class Kitchen extends PureComponent {
                 <Drawer className={ styles.kitchenDrawer }
                     isOpen={ isOpen }
                     onLeave={ this.handleOnKitchenLeave }>
-                    Kitchen
-                    Dropdown Table (first default selected)
-                    List of plates being cooked
+                    <select className={ styles.dropdown }
+                        onChange={ this.handleTableChange }>
+                        <option value="1">Table 1</option>
+                        <option value="2">Table 2</option>
+                        <option value="3">Table 3</option>
+                        <option value="4">Table 4</option>
+                    </select>
+                    <div>
+                        Plates being cooked:
+                    </div>
                 </Drawer>
             </div>
         );
+    }
+
+    handleTableChange(event) {
+        console.log('table', event.target.value);
     }
 
     handleOnKitchenHover() {

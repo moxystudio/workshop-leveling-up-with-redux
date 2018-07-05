@@ -5,6 +5,7 @@
    ========================================================================== */
 
 .header {
+    max-width: 80vw;
     height: var(--layout-header-height);
     z-index: 5;
     padding: 10px var(--layout-edge-spacing-x);
@@ -21,4 +22,9 @@
     color: var(--color-blue);
     font-size: 30px;
     font-weight: 600;
+
+    & .svg {
+        width: 165px;
+        height: 91px;
+    }
 }
