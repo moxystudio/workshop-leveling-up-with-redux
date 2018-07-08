@@ -1,6 +1,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Leave from './leave/Leave';
+import Order from './order/Order';
+import Sit from './sit/Sit';
 import Drawer from 'shared/components/drawer/Drawer';
 
 import styles from './Waiter.css';
@@ -10,7 +13,7 @@ class Waiter extends PureComponent {
         super(props);
         this.state = {
             isOpen: false,
-            requestType: 'order',
+            requestType: 'order', // Available types are: sit, order and leave table
         };
 
         this.handleOnWaiterHover = this.handleOnWaiterHover.bind(this);
@@ -37,15 +40,16 @@ class Waiter extends PureComponent {
                         onChange={ this.handleRequestChange }>
                         <option value="order">Order</option>
                         <option value="sit">Sit</option>
+                        <option value="leave">Leave</option>
                     </select>
-                    {
-                        requestType === 'order' ?
-                            <div>
-                                Form with quantities for each available plate
-                            </div> :
-                            <div>
-                                Radius list for choosing the table to sit
-                            </div>
+                    {requestType === 'order' &&
+                        <Order />
+                    }
+                    { requestType === 'sit' &&
+                        <Sit />
+                    }
+                    { requestType === 'leave' &&
+                        <Leave />
                     }
                 </Drawer>
             </div>

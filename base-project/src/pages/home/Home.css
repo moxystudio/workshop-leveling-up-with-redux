@@ -22,11 +22,6 @@
             font-weight: 300;
             text-transform: none;
         }
-
-        & .tables-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-        }
     }
 
     & .side-container {

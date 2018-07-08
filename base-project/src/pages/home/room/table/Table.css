@@ -1,0 +1,44 @@
+@import "variables";
+
+.container {
+    flex: 0 0 50%;
+}
+
+.table {
+    position: relative;
+    width: 50%;
+    max-width: 200px;
+    min-height: 140px;
+    margin: 75px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 19px;
+        right: 19px;
+        bottom: -19px;
+        left: -19px;
+        opacity: 0.21;
+        background-color: var(--color-grey);
+        border-radius: 4px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color-grey);
+        border-radius: 4px;
+    }
+
+    & .price {
+        font-size: 36px;
+        font-weight: 600;
+    }
+}

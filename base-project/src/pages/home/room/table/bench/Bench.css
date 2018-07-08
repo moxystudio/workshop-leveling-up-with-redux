@@ -9,19 +9,19 @@
 }
 
 .top {
-    top: -40px;
+    top: -50px;
 }
 
 .bottom {
-    bottom: -40px;
+    bottom: -50px;
 }
 
 .right {
-    right: 40px;
+    right: 50px;
 }
 
 .left {
-    left: 40px;
+    left: 50px;
 }
 
 .is-taken {

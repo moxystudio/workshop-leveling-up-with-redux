@@ -1,0 +1,4 @@
+.room {
+    display: flex;
+    flex-wrap: wrap;
+}
