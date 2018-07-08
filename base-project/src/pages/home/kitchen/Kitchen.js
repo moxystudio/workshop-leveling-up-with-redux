@@ -31,6 +31,9 @@ class Kitchen extends PureComponent {
                 <Drawer className={ styles.kitchenDrawer }
                     isOpen={ isOpen }
                     onLeave={ this.handleOnKitchenLeave }>
+                    <div className={ styles.drawerTitle }>
+                        Table to check:
+                    </div>
                     <select className={ styles.dropdown }
                         onChange={ this.handleTableChange }>
                         <option value="1">Table 1</option>

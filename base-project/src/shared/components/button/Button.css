@@ -1,0 +1,29 @@
+@import "variables";
+
+.button {
+    --color-text: var(--color-black);
+    --color-background: var(--color-white);
+
+    will-change: background, color;
+    position: relative;
+    height: 35px;
+    width: 100%;
+    padding: 0;
+    border-radius: 4px;
+    background: var(--color-background);
+    color: var(--color-text);
+    cursor: pointer;
+    appearance: none;
+    transition-property: color, background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    &:matches(:active, :focus, :visited, :hover) {
+        outline: none;
+    }
+
+    &:hover {
+        background: var(--color-orange);
+        --color-text: var(--color-white);
+    }
+}

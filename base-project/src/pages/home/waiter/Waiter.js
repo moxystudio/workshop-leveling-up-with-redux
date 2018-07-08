@@ -1,9 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Leave from './leave/Leave';
-import Order from './order/Order';
-import Sit from './sit/Sit';
+import Request from './request/Request';
 import Drawer from 'shared/components/drawer/Drawer';
 
 import styles from './Waiter.css';
@@ -35,6 +33,9 @@ class Waiter extends PureComponent {
                 <Drawer className={ styles.waiterDrawer }
                     isOpen={ isOpen }
                     onLeave={ this.handleOnWaiterLeave }>
+                    <div className={ styles.drawerTitle }>
+                        Action to take:
+                    </div>
                     <select className={ styles.dropdown }
                         value={ requestType }
                         onChange={ this.handleRequestChange }>
@@ -42,21 +43,14 @@ class Waiter extends PureComponent {
                         <option value="sit">Sit</option>
                         <option value="leave">Leave</option>
                     </select>
-                    {requestType === 'order' &&
-                        <Order />
-                    }
-                    { requestType === 'sit' &&
-                        <Sit />
-                    }
-                    { requestType === 'leave' &&
-                        <Leave />
-                    }
+                    <Request type={ requestType } />
                 </Drawer>
             </div>
         );
     }
 
     handleRequestChange(event) {
+        console.log('event', event);
         this.setState({ requestType: event.target.value });
     }
 
