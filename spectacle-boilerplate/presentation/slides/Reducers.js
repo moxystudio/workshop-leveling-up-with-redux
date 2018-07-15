@@ -58,15 +58,14 @@ class Example01 extends React.Component {
                     <Code>Example of a reducer</Code>
                 </Heading>
                 <Appear>
-                    { /* eslint-disable */ }
-                    <CodePane
-                        textSize="1.2rem"
-                        lang="jsx"
-                        source={require("raw-loader!../../assets/reducers01.example")}
-                        margin="20px auto"
-                        overflow = "overflow"
-                    />
-                    { /* eslint-enable */ }
+                    <div>
+                        <CodePane
+                            textSize="1.2rem"
+                            lang="jsx"
+                            source={require("raw-loader!../../assets/reducers01.example")}
+                            margin="20px auto"
+                            overflow = "overflow" />
+                    </div>
                 </Appear>
             </div>
         );
@@ -96,15 +95,14 @@ class Example02 extends React.Component {
                     <Code>Example of a combined reducer</Code>
                 </Heading>
                 <Appear>
-                    { /* eslint-disable */ }
-                    <CodePane
-                        textSize="1.2rem"
-                        lang="jsx"
-                        source={require("raw-loader!../../assets/reducers01.example")}
-                        margin="20px auto"
-                        overflow = "overflow"
-                    />
-                    { /* eslint-enable */ }
+                    <div>
+                        <CodePane
+                            textSize="1.2rem"
+                            lang="jsx"
+                            source={require("raw-loader!../../assets/reducers01.example")}
+                            margin="20px auto"
+                            overflow = "overflow" />
+                    </div>
                 </Appear>
             </div>
         );

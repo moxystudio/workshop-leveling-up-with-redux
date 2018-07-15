@@ -40,15 +40,14 @@ class BuildStore extends React.Component {
                     <Code>buildStore</Code>
                 </Heading>
                 <Appear>
-                    { /* eslint-disable */ }
-                    <CodePane
-                        textSize="1.2rem"
-                        lang="jsx"
-                        source={require("raw-loader!../../assets/buildStore01.example")}
-                        margin="20px auto"
-                        overflow = "overflow"
-                    />
-                    { /* eslint-enable */ }
+                    <div>
+                        <CodePane
+                            textSize="1.2rem"
+                            lang="jsx"
+                            source={require("raw-loader!../../assets/buildStore01.example")}
+                            margin="20px auto"
+                            overflow = "overflow" />
+                    </div>
                 </Appear>
             </div>
         );
@@ -63,15 +62,14 @@ class Connect extends React.Component {
                     <Code>connect</Code>
                 </Heading>
                 <Appear>
-                    { /* eslint-disable */ }
-                    <CodePane
-                        textSize="1.2rem"
-                        lang="jsx"
-                        source={require("raw-loader!../../assets/connect01.example")}
-                        margin="20px auto"
-                        overflow = "overflow"
-                    />
-                    { /* eslint-enable */ }
+                    <div>
+                        <CodePane
+                            textSize="1.2rem"
+                            lang="jsx"
+                            source={require("raw-loader!../../assets/connect01.example")}
+                            margin="20px auto"
+                            overflow = "overflow" />
+                    </div>
                 </Appear>
             </div>
         );
@@ -86,15 +84,14 @@ class Selectors extends React.Component {
                     <Code>selectors</Code>
                 </Heading>
                 <Appear>
-                    { /* eslint-disable */ }
-                    <CodePane
-                        textSize="1.2rem"
-                        lang="jsx"
-                        source={require("raw-loader!../../assets/selectors01.example")}
-                        margin="20px auto"
-                        overflow = "overflow"
-                    />
-                    { /* eslint-enable */ }
+                    <div>
+                        <CodePane
+                            textSize="1.2rem"
+                            lang="jsx"
+                            source={require("raw-loader!../../assets/selectors01.example")}
+                            margin="20px auto"
+                            overflow = "overflow" />
+                    </div>
                 </Appear>
             </div>
         );

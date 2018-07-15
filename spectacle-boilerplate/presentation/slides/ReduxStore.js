@@ -63,15 +63,14 @@ class Example01 extends React.Component {
                     <Code>Redux Store</Code>
                 </Heading>
                 <Appear>
-                    { /* eslint-disable */ }
-                    <CodePane
-                        textSize="1.2rem"
-                        lang="jsx"
-                        source={require("raw-loader!../../assets/redux-store01.example")}
-                        margin="20px auto"
-                        overflow = "overflow"
-                    />
-                    { /* eslint-enable */ }
+                    <div>
+                        <CodePane
+                            textSize="1.2rem"
+                            lang="jsx"
+                            source={require("raw-loader!../../assets/redux-store01.example")}
+                            margin="20px auto"
+                            overflow = "overflow" />
+                    </div>
                 </Appear>
             </div>
         );
