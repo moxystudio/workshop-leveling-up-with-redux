@@ -27,7 +27,7 @@ class Desc extends React.Component {
             <List textColor="secondary">
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        Every dispatched action will go through the middlewares
+                        All dispatched actions go through middlewares
                     </ListItem>
                 </Appear>
                 <Appear>
@@ -35,15 +35,28 @@ class Desc extends React.Component {
                         Middlewares listen to all the actions and process those that you want them to
                     </ListItem>
                 </Appear>
+            </List>
+        </div>);
+    }
+}
+
+class Usage extends React.Component {
+    render() {
+        return (<div>
+            <List textColor="secondary">
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        Very helpful for logging
+                        Very useful for logging
                     </ListItem>
                 </Appear>
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        Amazing to react to a certain action.
-                        Example: After a successful login you want to load all the user’s info.
+                        Amazing for reacting to a certain action
+                    </ListItem>
+                </Appear>
+                <Appear>
+                    <ListItem textSize="24" margin="20px 46px">
+                        eg. After a successful login you want to load all the user’s info.
                         Instead of doing it in a component which is susceptible to some kind of fail,
                         you can simply listen to the successful login action and dispatch a load user info action upon receiving it.
                         This way, you are transferring that logic into a middleware which makes your component cleaner and more reliable.
@@ -62,15 +75,14 @@ class Example01 extends React.Component {
                     <Code>Do something upon login</Code>
                 </Heading>
                 <Appear>
-                    { /* eslint-disable */ }
-                    <CodePane
-                        textSize="1.2rem"
-                        lang="jsx"
-                        source={require("raw-loader!../../assets/middlewares01.example")}
-                        margin="20px auto"
-                        overflow = "overflow"
-                    />
-                    { /* eslint-enable */ }
+                    <div>
+                        <CodePane
+                            textSize="1.2rem"
+                            lang="jsx"
+                            source={require("raw-loader!../../assets/middlewares01.example")}
+                            margin="20px auto"
+                            overflow = "overflow" />
+                    </div>
                 </Appear>
             </div>
         );
@@ -80,5 +92,6 @@ class Example01 extends React.Component {
 export default {
     Intro,
     Desc,
+    Usage,
     Example01
 };

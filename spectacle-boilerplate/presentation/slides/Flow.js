@@ -26,6 +26,11 @@ class Desc extends React.Component {
             <List textColor="secondary">
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
+                        REMOVE THIS SLIDE AND DESCRIBE THE DIAGRAM
+                    </ListItem>
+                </Appear>
+                <Appear>
+                    <ListItem textSize="34" margin="20px 0">
                         Actions describing updates
                     </ListItem>
                 </Appear>
@@ -60,7 +65,7 @@ class Diagram extends React.Component {
             <div>
                 <Appear>
                     { /* eslint-disable */ }
-                    <Image src={require("../../assets/kat.png")} />
+                    <Image src={require("../../assets/redux-flow.png")} />
                     { /* eslint-enable */ }
                 </Appear>
             </div>
