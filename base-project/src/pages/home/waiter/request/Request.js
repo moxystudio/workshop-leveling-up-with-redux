@@ -7,25 +7,32 @@ import Sit from './sit/Sit';
 
 class Request extends Component {
     render() {
-        const { type } = this.props;
+        const { type, tables, onNewOrder, onNewGuests, onLeavingGuests } = this.props;
 
         if (type === 'order') {
             return (
-                <Order />
+                <Order tables={ tables }
+                    onNewOrder={ onNewOrder } />
             );
         } else if (type === 'sit') {
             return (
-                <Sit tables={ [1] } />
+                <Sit tables={ tables }
+                    onNewGuests={ onNewGuests } />
             );
         }
 
         return (
-            <Leave />
+            <Leave tables={ tables }
+                onLeavingGuests={ onLeavingGuests } />
         );
     }
 
     static propTypes = {
-        type: PropTypes.string,
+        type: PropTypes.string.isRequired,
+        tables: PropTypes.array.isRequired,
+        onNewGuests: PropTypes.func.isRequired,
+        onNewOrder: PropTypes.func.isRequired,
+        onLeavingGuests: PropTypes.func.isRequired,
     }
 }
 

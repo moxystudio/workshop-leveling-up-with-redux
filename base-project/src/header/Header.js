@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import classNames from 'classnames';
 
 import Svg from 'shared/components/svg/Svg';
-import logoSvg from 'shared/media/images/logos/logo.svg';
+import logoSvg from 'shared/media/images/logos/logo-final.svg';
 
 import styles from './Header.css';
 

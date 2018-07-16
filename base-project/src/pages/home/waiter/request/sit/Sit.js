@@ -6,7 +6,7 @@ import styles from './Sit.css';
 
 class Sit extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.handleTableChange = this.handleTableChange.bind(this);
         this.handleGuestsChange = this.handleGuestsChange.bind(this);
     }
@@ -14,12 +14,13 @@ class Sit extends Component {
     render() {
         const { tables } = this.props;
 
+        // TODO: Need to check if all tables have guests
         if (!tables.length) {
             return (
                 <div>
                     You will have to wait for a new table to be available.
                 </div>
-            )
+            );
         }
 
         return (
@@ -59,6 +60,7 @@ class Sit extends Component {
     static propTypes = {
         className: PropTypes.string,
         tables: PropTypes.array.isRequired,
+        onNewGuests: PropTypes.func.isRequired,
     }
 }
 

@@ -10,7 +10,6 @@ class Waiter extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            isOpen: false,
             requestType: 'order', // Available types are: sit, order and leave table
         };
 
@@ -20,8 +19,8 @@ class Waiter extends PureComponent {
     }
 
     render() {
-        const { className } = this.props;
-        const { isOpen, requestType } = this.state;
+        const { className, isOpen, tables, onNewGuests, onNewOrder, onLeavingGuests } = this.props;
+        const { requestType } = this.state;
 
         return (
             <div className={ classNames(styles.waiter, { [className]: className }) }
@@ -43,7 +42,11 @@ class Waiter extends PureComponent {
                         <option value="sit">Sit</option>
                         <option value="leave">Leave</option>
                     </select>
-                    <Request type={ requestType } />
+                    <Request type={ requestType }
+                        tables={ tables }
+                        onNewGuests={ onNewGuests }
+                        onNewOrder={ onNewOrder }
+                        onLeavingGuests={ onLeavingGuests } />
                 </Drawer>
             </div>
         );
@@ -55,15 +58,26 @@ class Waiter extends PureComponent {
     }
 
     handleOnWaiterHover() {
-        this.setState({ isOpen: true });
+        const { onHover } = this.props;
+
+        onHover && onHover();
     }
 
     handleOnWaiterLeave() {
-        this.setState({ isOpen: false });
+        const { onLeave } = this.props;
+
+        onLeave && onLeave();
     }
 
     static propTypes = {
         className: PropTypes.string,
+        tables: PropTypes.array,
+        isOpen: PropTypes.bool,
+        onHover: PropTypes.func,
+        onLeave: PropTypes.func,
+        onNewGuests: PropTypes.func,
+        onNewOrder: PropTypes.func,
+        onLeavingGuests: PropTypes.func,
     }
 }
 
