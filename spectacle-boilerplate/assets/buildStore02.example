@@ -1,0 +1,31 @@
+import { compose } from 'recompose';
+
+import productsReducer from './products';
+import wishListReducer from './wishlist';
+import { routerMiddleware, routerReducer } from 'react-router-redux';
+import * as afterAuthenticationMiddlewares from 'shared/state/account/user/middlewares';
+
+export default function buildStore(history, initialState) {
+    const reducer = combineReducers({
+        products: productsReducer,
+        wishlist: wishListReducer,
+        routing: routerReducer,
+    });
+
+    const middlewares = [
+        routerMiddleware(history),
+        afterAuthenticationMiddlewares.loadUserInfo(),
+    ];
+
+    const enhancers = [
+        applyMiddleware(...middlewares),
+    ];
+
+    // If Redux DevTools Extension is installed use it, otherwise use Redux compose
+    const composeEnhancers = process.env.NODE_ENV !== 'production' && typeof window === 'object' &&
+        window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : compose;
+
+    const store = createStore(reducer, initialState, composeEnhancers(...enhancers));
+
+    return store;
+}

@@ -1,9 +1,1 @@
-const mapStateToProps = (state) => ({
-    items: state.items,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-    load: (productId) => dispatch(load(productId));
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(WrappedComponent);
+connect([mapStateToProps], [mapDispatchToProps], [mergeProps], [options])

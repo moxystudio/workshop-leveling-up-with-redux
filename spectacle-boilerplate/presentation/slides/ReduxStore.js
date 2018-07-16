@@ -26,27 +26,27 @@ class Desc extends React.Component {
         return (<div>
             <List textColor="secondary">
                 <Appear>
-                    <ListItem>
+                    <ListItem textSize="34px" margin="20px 0">
                         Object holding the application state
                     </ListItem>
                 </Appear>
                 <Appear>
-                    <ListItem>
+                    <ListItem textSize="34px" margin="20px 0">
                         Provides a getState function for reading the state
                     </ListItem>
                 </Appear>
                 <Appear>
-                    <ListItem>
+                    <ListItem textSize="34px" margin="20px 0">
                         Provides a dispatch function for dispatching actions that update the state
                     </ListItem>
                 </Appear>
                 <Appear>
-                    <ListItem>
+                    <ListItem textSize="34px" margin="20px 0">
                         Provides a subscribe and unsubscribe listener
                     </ListItem>
                 </Appear>
                 <Appear>
-                    <ListItem>
+                    <ListItem textSize="34px" margin="20px 0">
                         Can be split with the use of reducers and combineReducers function
                     </ListItem>
                 </Appear>

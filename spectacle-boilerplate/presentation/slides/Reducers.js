@@ -36,9 +36,14 @@ class Desc extends React.Component {
                     </ListItem>
                 </Appear>
                 <Appear>
-                    <ListItem textSize="24" margin="20px 46px">
-                        (prevState, action) => updatedState (code here)
-                    </ListItem>
+                    <div>
+                        <CodePane
+                            textSize="1.2rem"
+                            lang="jsx"
+                            source={require("raw-loader!../../assets/reducers01.example")}
+                            margin="20px 46px"
+                            overflow = "overflow" />
+                    </div>
                 </Appear>
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
@@ -62,7 +67,7 @@ class Example01 extends React.Component {
                         <CodePane
                             textSize="1.2rem"
                             lang="jsx"
-                            source={require("raw-loader!../../assets/reducers01.example")}
+                            source={require("raw-loader!../../assets/reducers02.example")}
                             margin="20px auto"
                             overflow = "overflow" />
                     </div>
@@ -99,7 +104,7 @@ class Example02 extends React.Component {
                         <CodePane
                             textSize="1.2rem"
                             lang="jsx"
-                            source={require("raw-loader!../../assets/reducers02.example")}
+                            source={require("raw-loader!../../assets/reducers03.example")}
                             margin="20px auto"
                             height="55vh"
                             overflow = "scroll" />
