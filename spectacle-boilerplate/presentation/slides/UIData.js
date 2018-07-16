@@ -12,7 +12,7 @@ class Intro extends React.Component {
     render() {
         return (
             <div>
-                <Heading size={2} lineHeight={1} caps fit textColor="secondary">
+                <Heading size={2} lineHeight={1} caps fit textColor="primary">
                     Relation between UI and Data
                 </Heading>
             </div>
@@ -24,7 +24,7 @@ class Desc extends React.Component {
     render() {
         return (<div>
             <Appear>
-                <Text>
+                <Text textColor="primary">
                     What do we need to have redux working with our app?
                 </Text>
             </Appear>

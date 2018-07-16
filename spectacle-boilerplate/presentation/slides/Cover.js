@@ -12,7 +12,7 @@ class Cover extends React.Component {
         return (
             <div>
                 <Heading size={1} fit caps lineHeight={1} textColor="secondary" margin="15% 0">
-                    Leveling up your UI using redux
+                    Leveling up your UI using redux 🚀
                 </Heading>
                 <Layout>
                     <Text textSize="24" textAlign="right">
