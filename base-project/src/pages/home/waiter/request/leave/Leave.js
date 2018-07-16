@@ -7,12 +7,14 @@ class Leave extends Component {
     render() {
         return (
             <div>
-                Leave Tableeee
+                Leave Table form
             </div>
         );
     }
 
     static propTypes = {
+        className: PropTypes.string,
+        tables: PropTypes.array.isRequired,
         onLeave: PropTypes.func,
     }
 }

@@ -47,7 +47,7 @@ class Desc extends React.Component {
                 </Appear>
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        Async actions (redux-thunk to be apple to use getState and dispatch)
+                        Async actions (redux-thunk to be able to use getState and dispatch)
                     </ListItem>
                 </Appear>
             </List>

@@ -18,8 +18,7 @@ class Kitchen extends PureComponent {
     }
 
     render() {
-        const { className } = this.props;
-        const { isOpen } = this.state;
+        const { className, isOpen } = this.props;
 
         return (
             <div className={ classNames(styles.kitchen, { [className]: className }) }
@@ -54,15 +53,23 @@ class Kitchen extends PureComponent {
     }
 
     handleOnKitchenHover() {
-        this.setState({ isOpen: true });
+        const { onHover } = this.props;
+
+        onHover && onHover();
     }
 
     handleOnKitchenLeave() {
-        this.setState({ isOpen: false });
+        const { onLeave } = this.props;
+
+        onLeave && onLeave();
     }
 
     static propTypes = {
         className: PropTypes.string,
+        isOpen: PropTypes.bool,
+        onHover: PropTypes.func,
+        onLeave: PropTypes.func,
+        onMealReady: PropTypes.func,
     }
 }
 

@@ -4,8 +4,9 @@ import classNames from 'classnames';
 import Bench from './bench/Bench';
 import styles from './Table.css';
 
-const Table = ({ className, guests, total }) => (
-    <div className={ classNames(styles.container, { [className]: className }) }>
+const Table = ({ className, guests, id, total, onClick }) => (
+    <div className={ classNames(styles.container, { [className]: className }) }
+        onClick={ onClick }>
         <div className={ styles.table }>
             <Bench
                 verticalAlignment="top"
@@ -23,11 +24,14 @@ const Table = ({ className, guests, total }) => (
                 verticalAlignment="bottom"
                 horizontalAlignment="right"
                 isTaken={ guests > 3 } />
+            <div className={ styles.id }>
+                {id}
+            </div>
             {
                 !!total && total > 0 &&
-                    <div className={ styles.price }>
-                        { total }€
-                    </div>
+                <div className={ styles.price }>
+                    {total}€
+                </div>
             }
         </div>
     </div>
@@ -36,8 +40,9 @@ const Table = ({ className, guests, total }) => (
 Table.propTypes = {
     className: PropTypes.string,
     guests: PropTypes.number,
-    paid: PropTypes.bool,
+    id: PropTypes.number,
     total: PropTypes.number,
+    onClick: PropTypes.func,
 };
 
 export default Table;
