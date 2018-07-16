@@ -1,0 +1,15 @@
+import { Provider } from 'redux';
+import { browserHistory as history } from 'react-router';
+
+import App from './App';
+
+const persistedState = localStorage.getItem('appState');
+
+const store = createStore(history, persistedState);
+
+render(
+    <Provider store={ store }>
+        <App />
+    </Provider>,
+    document.getElementById('root')
+);

@@ -2,10 +2,13 @@ import React from "react";
 import {
     Code,
     List,
+    Cite,
+    Quote,
     ListItem,
     CodePane,
     Appear,
-    Heading
+    Heading,
+    BlockQuote
 } from "spectacle";
 
 
@@ -38,9 +41,13 @@ class Desc extends React.Component {
                 <Appear>
                     <ListItem textSize="24" margin="20px 46px">
                         Cheap change detection techniques
-                        “ensuring the computationally expensive process of updating the DOM occurs only when it absolutely has to”
-                        - redux.js (shallow compare)
                     </ListItem>
+                </Appear>
+                <Appear>
+                    <BlockQuote margin="0 46px">
+                        <Quote bold={ false } textColor="secondary" textSize="24">ensuring the computationally expensive process of updating the DOM occurs only when it absolutely has to</Quote>
+                        <Cite textSize="24" margin="20px 46px">redux.js (shallow compare)</Cite>
+                    </BlockQuote>
                 </Appear>
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">

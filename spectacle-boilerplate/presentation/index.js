@@ -3,11 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-    Appear,
     Deck,
-    Heading,
-    Layout,
-    Text,
     Slide
 } from "spectacle";
 
@@ -21,7 +17,7 @@ import images from './getImages';
 preloader(images);
 
 // Import slides
-import Cover from "./slides/Cover"
+import Cover from "./slides/Cover";
 import WhyRedux from "./slides/WhyRedux";
 import ReduxStore from "./slides/ReduxStore";
 import Immutability from "./slides/Immutability";
@@ -125,17 +121,44 @@ export default class Presentation extends React.Component {
                 <Slide bgImage={images.app.replace("/", "")} bgDarken={0.75}>
                     <UIData.Desc />
                 </Slide>
-                <Slide bgColor="primary">
-                    <UIData.BuildStore />
+                <Slide transition={["slide"]} bgColor="primary">
+                    <UIData.BuildStoreIntro />
                 </Slide>
                 <Slide bgColor="primary">
-                    <UIData.Connect />
+                    <UIData.BuildStoreDesc />
                 </Slide>
                 <Slide bgColor="primary">
-                    <UIData.Selectors />
+                    <UIData.BuildStoreExample />
                 </Slide>
                 <Slide bgColor="primary">
-                    <UIData.AdvancedSelectors />
+                    <UIData.ProviderExample />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <UIData.ConnectIntro />
+                </Slide>
+                <Slide bgColor="primary">
+                    <UIData.ConnectDesc />
+                </Slide>
+                <Slide bgColor="primary">
+                    <UIData.ConnectExample />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <UIData.SelectorsIntro />
+                </Slide>
+                <Slide bgColor="primary">
+                    <UIData.SelectorsDesc />
+                </Slide>
+                <Slide bgColor="primary">
+                    <UIData.SelectorsExample />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <UIData.AdvancedSelectorsIntro />
+                </Slide>
+                <Slide bgColor="primary">
+                    <UIData.AdvancedSelectorsDesc />
+                </Slide>
+                <Slide bgColor="primary">
+                    <UIData.AdvancedSelectorsDemo />
                 </Slide>
                 <Slide transition={["zoom"]} bgColor="primary">
                     <Coding />

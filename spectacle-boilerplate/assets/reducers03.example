@@ -9,10 +9,24 @@ function removeFromArray(state, action) {
     };
 }
 
+function addToArray(state, action) {
+    const { item } = action.payload;
+
+    return {
+        items: [
+            ...state.items,
+            item,
+        ],
+    };
+}
+
 export default function itemsReducer(state, action) {
     switch(action.type) {
         case REMOVE_ITEM:
             return removeFromArray(state, action);
+        case ADD_ITEM:
+            return addToArray(state, action);
+        ...
         default:
             return state;
     }
