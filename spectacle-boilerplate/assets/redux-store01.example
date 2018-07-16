@@ -1,1 +1,3 @@
-const store = buildStore();
+import { createStore } from 'redux'
+
+const store = createStore(reducer, [preloadedState]);

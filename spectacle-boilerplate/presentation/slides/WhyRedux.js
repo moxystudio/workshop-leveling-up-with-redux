@@ -25,31 +25,29 @@ class Desc extends React.Component {
             <List textColor="secondary">
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        Apps are more and more complex nowadays
+                        Apps are getting more and more complex
+                    </ListItem>
+                </Appear>
+                <Appear>
+                    <ListItem textSize="24" margin="20px 46px">
+                        We need to trigger an event with a state change in the component, which is a sibling of the father
+                        of the three children that contains the father of our component
+                        (Lost yourself reading this? imagine doing all this logic with component state and callbacks)
                     </ListItem>
                 </Appear>
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        We need to trigger some event with the change of something
-                        in the component that is a sibling of the father of the three
-                        children that contains the father of our component (if you have
-                        lost yourself reading this, imagine doing all this logic
-                        with component state and callbacks)
+                        Need to store and manage our data coming from a server (API calls, server-rendering)
                     </ListItem>
                 </Appear>
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        We need some place to store and manage our data coming from a server (API calls, server-rendering)
+                        Need to differentiate data, which hasn’t been persisted to the server yet (eg. optimistic updates)
                     </ListItem>
                 </Appear>
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
-                        We need to differentiate data that hasn’t been persisted to the server yet (optimistic updates for instance)
-                    </ListItem>
-                </Appear>
-                <Appear>
-                    <ListItem textSize="34" margin="20px 0">
-                        We need predictability
+                        Need predictability
                     </ListItem>
                 </Appear>
             </List>

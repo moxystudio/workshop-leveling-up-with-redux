@@ -27,27 +27,27 @@ class Desc extends React.Component {
             <List textColor="secondary">
                 <Appear>
                     <ListItem>
-                        Object that holds the application state
+                        Object holding the application state
+                    </ListItem>
+                </Appear>
+                <Appear>
+                    <ListItem>
+                        Provides a getState function for reading the state
+                    </ListItem>
+                </Appear>
+                <Appear>
+                    <ListItem>
+                        Provides a dispatch function for dispatching actions that update the state
+                    </ListItem>
+                </Appear>
+                <Appear>
+                    <ListItem>
+                        Provides a subscribe and unsubscribe listener
                     </ListItem>
                 </Appear>
                 <Appear>
                     <ListItem>
                         Can be split with the use of reducers and combineReducers function
-                    </ListItem>
-                </Appear>
-                <Appear>
-                    <ListItem>
-                        Offers a getState function to read the state
-                    </ListItem>
-                </Appear>
-                <Appear>
-                    <ListItem>
-                        Offers a dispatch function to dispatch actions that will cause the state to update
-                    </ListItem>
-                </Appear>
-                <Appear>
-                    <ListItem>
-                        Offers a subscribe and unsubscribe listener
                     </ListItem>
                 </Appear>
             </List>
@@ -63,15 +63,14 @@ class Example01 extends React.Component {
                     <Code>Redux Store</Code>
                 </Heading>
                 <Appear>
-                    { /* eslint-disable */ }
-                    <CodePane
-                        textSize="1.2rem"
-                        lang="jsx"
-                        source={require("raw-loader!../../assets/redux-store01.example")}
-                        margin="20px auto"
-                        overflow = "overflow"
-                    />
-                    { /* eslint-enable */ }
+                    <div>
+                        <CodePane
+                            textSize="1.2rem"
+                            lang="jsx"
+                            source={require("raw-loader!../../assets/redux-store01.example")}
+                            margin="20px auto"
+                            overflow = "overflow" />
+                    </div>
                 </Appear>
             </div>
         );
