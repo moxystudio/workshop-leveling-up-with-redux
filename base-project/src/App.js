@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Header from './header/Header';
-import Footer from './footer/Footer';
 import styles from './App.css';
 import buildPageRoutes from './pages/buildRoutes';
 
@@ -26,7 +25,6 @@ class App extends PureComponent {
 
                 <Header className={ styles.header } />
                 { children }
-                <Footer className={ styles.footer } />
             </div>
         );
     }

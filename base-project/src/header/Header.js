@@ -2,7 +2,10 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import classNames from 'classnames';
-import Navigation from './navigation/Navigation';
+
+import Svg from 'shared/components/svg/Svg';
+import logoSvg from 'shared/media/images/logos/logo.svg';
+
 import styles from './Header.css';
 
 class Header extends PureComponent {
@@ -13,9 +16,8 @@ class Header extends PureComponent {
         return (
             <header className={ headerClass }>
                 <Link className={ styles.logo } to="/">
-                    Restaurant
+                    <Svg className={ styles.svg } svg={ logoSvg } />
                 </Link>
-                <Navigation />
             </header>
         );
     }

@@ -1,0 +1,29 @@
+@import "variables";
+
+.bench {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-green);
+    border-radius: 50%;
+}
+
+.top {
+    top: -50px;
+}
+
+.bottom {
+    bottom: -50px;
+}
+
+.right {
+    right: 50px;
+}
+
+.left {
+    left: 50px;
+}
+
+.is-taken {
+    background-color: var(--color-red);
+}

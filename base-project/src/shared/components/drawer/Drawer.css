@@ -1,0 +1,18 @@
+@import "variables";
+
+.drawer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30vw;
+    z-index: 10;
+    padding: 39px;
+    transform: translateX(100%);
+    background-color: var(--color-light-grey);
+    transition: transform 0.3s ease-out;
+}
+
+.drawer.open {
+    transform: translateX(0);
+}

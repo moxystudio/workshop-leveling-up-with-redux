@@ -5,3 +5,38 @@
    ========================================================================== */
 
 @mixin layout-main .home-page, .container;
+
+.home-page {
+    position: relative;
+
+    & .container {
+        width: 80vw;
+
+        & .welcoming {
+            font-size: 33px;
+            font-weight: 600;
+        }
+
+        & .demo {
+            font-size: 30px;
+            font-weight: 300;
+            text-transform: none;
+        }
+    }
+
+    & .side-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 20vw;
+
+        & .waiter {
+            height: 50%;
+        }
+
+        & .kitchen {
+            height: 50%;
+        }
+    }
+}
