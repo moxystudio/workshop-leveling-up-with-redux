@@ -7,12 +7,11 @@ import {
     Heading
 } from "spectacle";
 
-
 class Intro extends React.Component {
     render() {
         return (
             <div>
-                <Heading size={2} lineHeight={1} caps fit textColor="secondary">
+                <Heading size={2} lineHeight={1} caps fit textColor="primary">
                     Redux Flow
                 </Heading>
             </div>
@@ -20,15 +19,11 @@ class Intro extends React.Component {
     }
 }
 
+/*
 class Desc extends React.Component {
     render() {
         return (<div>
             <List textColor="secondary">
-                <Appear>
-                    <ListItem textSize="34" margin="20px 0">
-                        REMOVE THIS SLIDE AND DESCRIBE THE DIAGRAM
-                    </ListItem>
-                </Appear>
                 <Appear>
                     <ListItem textSize="34" margin="20px 0">
                         Actions describing updates
@@ -57,7 +52,7 @@ class Desc extends React.Component {
             </List>
         </div>);
     }
-}
+} */
 
 class Diagram extends React.Component {
     render() {
@@ -75,6 +70,5 @@ class Diagram extends React.Component {
 
 export default {
     Intro,
-    Desc,
     Diagram
 };

@@ -14,6 +14,12 @@ import {
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
+// Import image preloader util
+import preloader from "spectacle/lib/utils/preloader";
+
+import images from './getImages';
+preloader(images);
+
 // Import slides
 import Cover from "./slides/Cover"
 import WhyRedux from "./slides/WhyRedux";
@@ -32,7 +38,6 @@ require("normalize.css");
 
 const theme = createTheme({
     primary: "white",
-    //secondary: "#764abcff",
     secondary: "#2932d3",
     tertiary: "#03A9FC",
     quarternary: "#CECECE"
@@ -48,22 +53,13 @@ export default class Presentation extends React.Component {
                 <Slide transition={["zoom"]} bgColor="primary">
                     <Cover />
                 </Slide>
-                <Slide bgColor="primary">
+                <Slide transition={["spin"]} bgImage={images.thinking.replace("/", "")} bgDarken={0.75}>
                     <WhyRedux.Intro />
                 </Slide>
-                <Slide bgColor="primary">
+                <Slide transition={["slide"]} bgColor="primary">
                     <WhyRedux.Desc />
                 </Slide>
-                <Slide bgColor="primary">
-                    <ReduxStore.Intro />
-                </Slide>
-                <Slide bgColor="primary">
-                    <ReduxStore.Desc />
-                </Slide>
-                <Slide bgColor="primary">
-                    <ReduxStore.Example01 />
-                </Slide>
-                <Slide bgColor="primary">
+                <Slide bgColor="secondary">
                     <Immutability.Intro />
                 </Slide>
                 <Slide bgColor="primary">
@@ -72,16 +68,22 @@ export default class Presentation extends React.Component {
                 <Slide bgColor="primary">
                     <Immutability.Example01 />
                 </Slide>
-                <Slide bgColor="primary">
-                    <Flow.Intro />
+                <Slide transition={["spin"]} bgImage={images.data.replace("/", "")} bgDarken={0.75}>
+                    <ReduxStore.Intro />
                 </Slide>
-                <Slide bgColor="primary">
-                    <Flow.Desc />
+                <Slide transition={["slide"]} bgColor="primary">
+                    <ReduxStore.Desc />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <ReduxStore.Example01 />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="secondary">
+                    <Flow.Intro />
                 </Slide>
                 <Slide bgColor="primary">
                     <Flow.Diagram />
                 </Slide>
-                <Slide bgColor="primary">
+                <Slide transition={["slide"]} bgColor="primary">
                     <Actions.Intro />
                 </Slide>
                 <Slide bgColor="primary">
@@ -90,7 +92,7 @@ export default class Presentation extends React.Component {
                 <Slide bgColor="primary">
                     <Actions.Example01 />
                 </Slide>
-                <Slide bgColor="primary">
+                <Slide transition={["slide"]} bgColor="primary">
                     <Middlewares.Intro />
                 </Slide>
                 <Slide bgColor="primary">
@@ -102,7 +104,7 @@ export default class Presentation extends React.Component {
                 <Slide bgColor="primary">
                     <Middlewares.Example01 />
                 </Slide>
-                <Slide bgColor="primary">
+                <Slide transition={["slide"]} bgColor="primary">
                     <Reducers.Intro />
                 </Slide>
                 <Slide bgColor="primary">
@@ -117,10 +119,10 @@ export default class Presentation extends React.Component {
                 <Slide bgColor="primary">
                     <Reducers.Example02 />
                 </Slide>
-                <Slide bgColor="primary">
+                <Slide transition={["slide"]} bgColor="secondary">
                     <UIData.Intro />
                 </Slide>
-                <Slide bgColor="primary">
+                <Slide bgImage={images.app.replace("/", "")} bgDarken={0.75}>
                     <UIData.Desc />
                 </Slide>
                 <Slide bgColor="primary">

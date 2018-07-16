@@ -99,9 +99,10 @@ class Example02 extends React.Component {
                         <CodePane
                             textSize="1.2rem"
                             lang="jsx"
-                            source={require("raw-loader!../../assets/reducers01.example")}
+                            source={require("raw-loader!../../assets/reducers02.example")}
                             margin="20px auto"
-                            overflow = "overflow" />
+                            height="55vh"
+                            overflow = "scroll" />
                     </div>
                 </Appear>
             </div>

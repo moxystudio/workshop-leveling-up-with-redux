@@ -13,7 +13,7 @@ class Intro extends React.Component {
     render() {
         return (
             <div>
-                <Heading size={2} lineHeight={1} caps fit textColor="secondary">
+                <Heading size={2} lineHeight={1} caps fit textColor="primary">
                     Immutability
                 </Heading>
             </div>
