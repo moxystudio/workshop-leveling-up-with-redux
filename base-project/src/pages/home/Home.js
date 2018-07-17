@@ -3,6 +3,9 @@ import Room from './room/Room';
 import Waiter from './waiter/Waiter';
 import Kitchen from './kitchen/Kitchen';
 import styles from './Home.css';
+import omit from 'lodash/omit';
+
+import menu from 'shared/constants/menu';
 
 class Home extends Component {
     constructor(props) {
@@ -55,7 +58,7 @@ class Home extends Component {
     }
 
     render() {
-        const { waiterOpen, kitchenOpen, tables } = this.state;
+        const { waiterOpen, kitchenOpen, tables, kitchen } = this.state;
 
         return (
             <main className={ styles.homePage }>
@@ -79,6 +82,7 @@ class Home extends Component {
                         onNewOrder={ this.handleOnNewOrder }
                         onLeavingGuests={ this.handleOnLeavingGuests } />
                     <Kitchen className={ styles.kitchen }
+                        kitchen={ kitchen }
                         isOpen={ kitchenOpen }
                         onHover={ this.handleOnKitchenHover }
                         onLeave={ this.handleOnKitchenLeave }
@@ -89,8 +93,35 @@ class Home extends Component {
     }
 
     // Kitchen actions
-    handleOnMealReady(tableId, mealId) {
-        console.log('table id', mealId);
+    handleOnMealReady(tableId, orderId, itemName, quantity) {
+        const order = this.state.kitchen[tableId][orderId];
+        const updatedOrder = {
+            ...order,
+            items: omit(order.items, itemName),
+        };
+
+        this.setState(({ tables, kitchen }) => ({
+            tables: [
+                ...tables.splice(0, tableId),
+                {
+                    ...tables[tableId],
+                    total: tables[tableId].total + (menu.find((entry) => entry.itemName === itemName).itemPrice * quantity),
+                    order: {
+                        ...tables[tableId].order,
+                        [itemName]: tables[tableId].order ? (tables[tableId].order[itemName] || 0) + quantity : quantity,
+                    },
+                },
+                ...tables.splice(tableId + 1),
+            ],
+            kitchen: {
+                ...kitchen,
+                [tableId]: [
+                    ...kitchen[tableId].splice(0, orderId),
+                    updatedOrder,
+                    ...kitchen[tableId].splice(orderId + 1),
+                ],
+            },
+        }));
     }
 
     // Waiter actions

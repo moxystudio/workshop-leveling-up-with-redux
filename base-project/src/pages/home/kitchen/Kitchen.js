@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Drawer from 'shared/components/drawer/Drawer';
+import Plates from './plates/Plates';
 
 import styles from './Kitchen.css';
 
@@ -10,15 +11,17 @@ class Kitchen extends PureComponent {
         super(props);
         this.state = {
             isOpen: false,
+            tableId: 0,
         };
 
         this.handleOnKitchenHover = this.handleOnKitchenHover.bind(this);
         this.handleOnKitchenLeave = this.handleOnKitchenLeave.bind(this);
         this.handleTableChange = this.handleTableChange.bind(this);
+        this.handleMealReady = this.handleMealReady.bind(this);
     }
 
     render() {
-        const { className, isOpen } = this.props;
+        const { className, kitchen, isOpen } = this.props;
 
         return (
             <div className={ classNames(styles.kitchen, { [className]: className }) }
@@ -40,8 +43,9 @@ class Kitchen extends PureComponent {
                         <option value="3">Table 3</option>
                         <option value="4">Table 4</option>
                     </select>
-                    <div>
+                    <div className={ styles.plates }>
                         Plates being cooked:
+                        <Plates orders={ kitchen[this.state.tableId] } onMealReady={ this.handleMealReady } />
                     </div>
                 </Drawer>
             </div>
@@ -49,7 +53,15 @@ class Kitchen extends PureComponent {
     }
 
     handleTableChange(event) {
-        console.log('table', event.target.value);
+        this.setState({
+            tableId: Number(event.target.value),
+        });
+    }
+
+    handleMealReady(orderId, itemName, itemQuantity) {
+        const { onMealReady } = this.props;
+
+        onMealReady && onMealReady(this.state.tableId, orderId, itemName, itemQuantity);
     }
 
     handleOnKitchenHover() {
@@ -66,6 +78,7 @@ class Kitchen extends PureComponent {
 
     static propTypes = {
         className: PropTypes.string,
+        kitchen: PropTypes.object,
         isOpen: PropTypes.bool,
         onHover: PropTypes.func,
         onLeave: PropTypes.func,
