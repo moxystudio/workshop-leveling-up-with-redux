@@ -22,6 +22,10 @@ npm install
 npm run start
 ```
 
+#### Introductory example
+
+Link to sandbox: https://codesandbox.io/s/71mz185zq
+
 ### Demo
 
 We will provide a small demo for how to improve the performance of web application with selectors.
