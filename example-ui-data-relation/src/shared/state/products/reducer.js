@@ -8,12 +8,34 @@ const initialState = {
 };
 
 function loadReducer(state, action) {
-    const { items } = action.payload;
+    switch (action.type) {
+    case actionTypes.LOAD_START: {
+        return {
+            ...state,
+            isLoading: true,
+        };
+    }
+    case actionTypes.LOAD_SUCCESS: {
+        const { items } = action.payload;
 
-    return {
-        ...state,
-        items,
-    };
+        return {
+            ...state,
+            isLoading: false,
+            items,
+        };
+    }
+    case actionTypes.LOAD_FAIL: {
+        const { error } = action.payload;
+
+        return {
+            ...state,
+            error,
+        };
+    }
+
+    default:
+        return state;
+    }
 }
 
 function loadMoreReducer(state, action) {
@@ -30,7 +52,9 @@ function loadMoreReducer(state, action) {
 
 export function productsReducer(state = initialState, action) {
     switch (action.type) {
-    case actionTypes.LOAD:
+    case actionTypes.LOAD_START:
+    case actionTypes.LOAD_SUCCESS:
+    case actionTypes.LOAD_FAIL:
         return loadReducer(state, action);
     case actionTypes.LOAD_MORE:
         return loadMoreReducer(state, action);

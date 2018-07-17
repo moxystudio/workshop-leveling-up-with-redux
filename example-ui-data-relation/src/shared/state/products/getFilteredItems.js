@@ -1,5 +1,5 @@
 export default (items, filter, sort) => {
-    if (!items) {
+    if (!items || !items.length) {
         return [];
     }
 

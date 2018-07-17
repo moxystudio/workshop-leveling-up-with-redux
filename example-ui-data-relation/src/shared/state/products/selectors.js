@@ -1,5 +1,13 @@
 import { createSelector } from 'reselect';
 
+export const getError = createSelector([
+    (state) => state.products.error,
+], (error) => error);
+
+export const getStatus = createSelector([
+    (state) => state.products.isLoading,
+], (isLoading) => isLoading);
+
 export const getItems = createSelector([
     (state) => state.products.items,
 ], (items) => !items ? [] : items);
