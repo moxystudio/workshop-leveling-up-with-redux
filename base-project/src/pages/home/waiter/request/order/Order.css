@@ -1,0 +1,10 @@
+.order {
+    height: 70%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.dropdown {
+    width: 100%;
+    margin: 20px 0;
+}

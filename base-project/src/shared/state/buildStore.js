@@ -1,14 +1,8 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import reduxThunk from 'redux-thunk';
 
-import productsReducer from 'shared/state/products';
-import favoritesReducer from 'shared/state/user/favorites';
-
 export default function buildStore(history, initialState) {
-    const reducer = combineReducers({
-        products: productsReducer,
-        favorites: favoritesReducer,
-    });
+    const reducer = combineReducers({});
 
     const middlewares = [
         reduxThunk,
