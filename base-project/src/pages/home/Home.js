@@ -11,21 +11,25 @@ class Home extends Component {
             waiterOpen: false,
             kitchenOpen: false,
             tables: [{
+                id: 0,
                 guests: 0,
                 total: 0,
                 paid: false,
             },
             {
+                id: 1,
                 guests: 0,
                 total: 0,
                 paid: false,
             },
             {
+                id: 2,
                 guests: 0,
                 total: 0,
                 paid: false,
             },
             {
+                id: 3,
                 guests: 0,
                 total: 0,
                 paid: false,
@@ -107,6 +111,7 @@ class Home extends Component {
             tables: [
                 ...tables.slice(0, tableIndex),
                 {
+                    id: tableIndex,
                     guests,
                     total: 0,
                     paid: false,
@@ -121,6 +126,7 @@ class Home extends Component {
             tables: [
                 ...tables.slice(0, tableIndex),
                 {
+                    id: tableIndex,
                     guests: 0,
                     total: 0,
                     paid: false,
