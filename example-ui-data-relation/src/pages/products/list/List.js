@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { actions } from 'shared/state/products';
+import { actions, selectors } from 'shared/state/products';
 import getFilteredItems from 'shared/state/products/getFilteredItems';
 import { actions as favoriteActions } from 'shared/state/user/favorites';
+
+import Loading from 'shared/components/loading/Loading';
 
 import Item from './item/Item';
 import styles from './List.css';
@@ -24,7 +26,15 @@ export class List extends Component {
     }
 
     render() {
-        const { items } = this.props;
+        const { items, error, isLoading } = this.props;
+
+        if (error) {
+            return <div className={ styles.error }>{ error.message }</div>;
+        }
+
+        if (isLoading) {
+            return <Loading />;
+        }
 
         return (
             <div className={ styles.container } >
@@ -56,6 +66,8 @@ export class List extends Component {
 
     static propTypes = {
         items: PropTypes.array,
+        error: PropTypes.object,
+        isLoading: PropTypes.bool,
         load: PropTypes.func.isRequired,
         loadMore: PropTypes.func.isRequired,
         addToFavorites: PropTypes.func.isRequired,
@@ -69,6 +81,8 @@ export const mapStateToProps = (state) => {
     const sortBy = state.products.sortBy;
 
     return {
+        error: selectors.getError(state),
+        isLoading: selectors.getStatus(state),
         items: getFilteredItems(items, filterBy, sortBy),
     };
 };
