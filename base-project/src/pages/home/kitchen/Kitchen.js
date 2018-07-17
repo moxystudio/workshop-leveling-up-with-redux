@@ -38,14 +38,23 @@ class Kitchen extends PureComponent {
                     </div>
                     <select className={ styles.dropdown }
                         onChange={ this.handleTableChange }>
-                        <option value="1">Table 1</option>
-                        <option value="2">Table 2</option>
-                        <option value="3">Table 3</option>
-                        <option value="4">Table 4</option>
+                        <option value="0">Table 1</option>
+                        <option value="1">Table 2</option>
+                        <option value="2">Table 3</option>
+                        <option value="3">Table 4</option>
                     </select>
                     <div className={ styles.plates }>
                         Plates being cooked:
-                        <Plates orders={ kitchen[this.state.tableId] } onMealReady={ this.handleMealReady } />
+                        { Object.keys(kitchen).map((entry) => (
+                            <Plates
+                                key={ entry }
+                                tableId={ Number(entry) }
+                                className={ classNames(styles.plate, {
+                                    [styles.hidden]: Number(entry) !== this.state.tableId,
+                                }) }
+                                orders={ kitchen[entry] }
+                                onMealReady={ this.handleMealReady } />)
+                        )}
                     </div>
                 </Drawer>
             </div>
@@ -58,10 +67,10 @@ class Kitchen extends PureComponent {
         });
     }
 
-    handleMealReady(orderId, itemName, itemQuantity) {
+    handleMealReady(tableId, orderId, itemName, itemQuantity) {
         const { onMealReady } = this.props;
 
-        onMealReady && onMealReady(this.state.tableId, orderId, itemName, itemQuantity);
+        onMealReady && onMealReady(tableId, orderId, itemName, itemQuantity);
     }
 
     handleOnKitchenHover() {

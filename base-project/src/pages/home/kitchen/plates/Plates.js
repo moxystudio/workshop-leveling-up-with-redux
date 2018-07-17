@@ -12,14 +12,14 @@ const cookingTimes = {
 
 class Plates extends Component {
     render() {
-        const { orders, onMealReady } = this.props;
+        const { orders, className, onMealReady, ...rest } = this.props;
 
         if (!orders || !orders.length) {
             return null;
         }
 
         return (
-            <div>
+            <div className={ className }>
                 { orders.map((entry, index) =>
                     Object.keys(entry.items).map((plate) => (
                         <Cooking
@@ -28,7 +28,8 @@ class Plates extends Component {
                             itemName={ plate }
                             itemQuantity={ entry.items[plate] }
                             itemCookingTime={ cookingTimes[plate] }
-                            onFinishedCooking={ onMealReady } />
+                            onFinishedCooking={ onMealReady }
+                            { ...rest } />
                     ))
                 )}
             </div>
@@ -36,6 +37,7 @@ class Plates extends Component {
     }
 
     static propTypes = {
+        className: PropTypes.string,
         orders: PropTypes.array.isRequired,
         onMealReady: PropTypes.func.isRequired,
     }

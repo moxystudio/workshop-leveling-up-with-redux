@@ -47,3 +47,13 @@
     overflow-x: hidden;
     overflow-y: scroll;
 }
+
+.plate {
+    height: auto;
+    opacity: 1;
+}
+
+.plate.hidden {
+    height: 0;
+    opacity: 0;
+}

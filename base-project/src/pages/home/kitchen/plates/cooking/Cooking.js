@@ -7,9 +7,9 @@ import styles from './Cooking.css';
 
 class Cooking extends Component {
     componentDidMount() {
-        const { onFinishedCooking, orderId, itemName, itemQuantity, itemCookingTime } = this.props;
+        const { onFinishedCooking, tableId, orderId, itemName, itemQuantity, itemCookingTime } = this.props;
 
-        setTimeout(() => onFinishedCooking(orderId, itemName, itemQuantity), itemQuantity * itemCookingTime);
+        setTimeout(() => onFinishedCooking(tableId, orderId, itemName, itemQuantity), itemQuantity * itemCookingTime);
     }
 
     render() {
@@ -28,6 +28,7 @@ class Cooking extends Component {
     }
 
     static propTypes = {
+        tableId: PropTypes.number.isRequired,
         orderId: PropTypes.number.isRequired,
         itemName: PropTypes.string.isRequired,
         itemQuantity: PropTypes.number.isRequired,
