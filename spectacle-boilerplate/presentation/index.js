@@ -55,6 +55,9 @@ export default class Presentation extends React.Component {
                 <Slide transition={["slide"]} bgColor="primary">
                     <WhyRedux.Desc />
                 </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <WhyRedux.SimpleFlow />
+                </Slide>
                 <Slide bgColor="secondary">
                     <Immutability.Intro />
                 </Slide>
@@ -82,30 +85,36 @@ export default class Presentation extends React.Component {
                 <Slide transition={["slide"]} bgColor="primary">
                     <Actions.Intro />
                 </Slide>
+                {/* 
                 <Slide bgColor="primary">
                     <Actions.Desc />
                 </Slide>
+                */}
                 <Slide bgColor="primary">
                     <Actions.Example01 />
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Middlewares.Intro />
                 </Slide>
+                {/*
                 <Slide bgColor="primary">
                     <Middlewares.Desc />
+                </Slide>
+                */}
+                <Slide bgColor="primary">
+                    <Middlewares.Example01 />
                 </Slide>
                 <Slide bgColor="primary">
                     <Middlewares.Usage />
                 </Slide>
-                <Slide bgColor="primary">
-                    <Middlewares.Example01 />
-                </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Reducers.Intro />
                 </Slide>
+                {/*
                 <Slide bgColor="primary">
                     <Reducers.Desc />
                 </Slide>
+                */}
                 <Slide bgColor="primary">
                     <Reducers.Example01 />
                 </Slide>

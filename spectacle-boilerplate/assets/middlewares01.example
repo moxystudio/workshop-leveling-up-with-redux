@@ -1,9 +1,9 @@
-export function loadUserInfoUponLogin() {
+export function loadProductInfoUponAdding() {
     return (store) => (next) => (action) => {
-        if (action.type === LOGIN) {
-            const { userId } = action.payload;
+        if (action.type === PRODUCT_INFO) {
+            const { productId } = action.payload;
 
-            store.dispatch(loadUserInfo(userId);
+            store.dispatch(loadProductInfo(productId);
         }
 
         // We need to pass the action down to the other middlewares

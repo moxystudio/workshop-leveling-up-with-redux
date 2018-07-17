@@ -1,7 +1,5 @@
 import React from "react";
 import {
-    List,
-    ListItem,
     Appear,
     Image,
     Heading

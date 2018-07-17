@@ -1,18 +1,18 @@
-function removeFromArray(state, action) {
-    const { itemIndexToRemove } = action.payload;
+function addProduct(state, action) {
+    const { item } = action.payload;
 
     return {
         items: [
-            ...state.items.slice(0, itemIndexToRemove),
-            ...state.items.slice(itemIndexToRemove + 1),
+            ...state.items,
+            item,
         ],
     };
 }
 
 export default function itemsReducer(state, action) {
     switch(action.type) {
-        case REMOVE_ITEM:
-            return removeFromArray(state, action);
+        case ADD_ITEM:
+            return addProduct(state, action);
         default:
             return state;
     }

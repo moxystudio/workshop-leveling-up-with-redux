@@ -72,7 +72,7 @@ class Example01 extends React.Component {
         return (
             <div>
                 <Heading size={3} lineHeight={1} textColor="quaternary" margin="20px 0">
-                    <Code>Do something upon login</Code>
+                    <Code>Do something upon adding</Code>
                 </Heading>
                 <Appear>
                     <div>

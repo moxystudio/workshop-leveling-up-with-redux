@@ -2,6 +2,7 @@ import React from "react";
 import {
     List,
     ListItem,
+    Image,
     Appear,
     Heading
 } from "spectacle";
@@ -55,7 +56,23 @@ class Desc extends React.Component {
     }
 }
 
+class SimpleFlow extends React.Component {
+    render() {
+        return (<div>
+            <Heading size={2} lineHeight={1} caps fit textColor="quaternary">
+                Simple data flow
+            </Heading>
+            <Appear>
+                { /* eslint-disable */}
+                <Image src={require("../../assets/redux-flow-simple.png")} />
+                { /* eslint-enable */}
+            </Appear>
+        </div>);
+    }
+}
+
 export default {
     Intro,
-    Desc
+    Desc,
+    SimpleFlow
 };
