@@ -33,7 +33,6 @@ export class Wishlists extends Component {
 }
 
 export const mapStateToProps = (state) => {
-    // Items: selectors.getFilteredItems(state), /* Improving performance with selectors */
     const listings = state.favorites.listings;
     const keys = state.favorites.keys;
 

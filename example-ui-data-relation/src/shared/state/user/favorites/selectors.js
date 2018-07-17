@@ -2,13 +2,20 @@ import { createSelector } from 'reselect';
 
 export function createGetWishlist() {
     return createSelector([
-        (state) => state.favorites.listings,
+        (state, wishlistId) => state.favorites.listings[wishlistId],
         (state, wishlistId) => wishlistId,
-    ], (listings, wishlistId) => {
-        if (!listings) {
-            return;
-        }
+    ], (listing, wishlistId) => {
+        console.log('RUNNING FACTORY SELECTOR TO GET WISHLIST NR: ', wishlistId);
 
-        return listings[wishlistId];
+        return listing;
     });
 }
+
+export const getWishlist = createSelector([
+    (state, wishlistId) => state.favorites.listings[wishlistId],
+    (state, wishlistId) => wishlistId,
+], (listing, wishlistId) => {
+    console.log('RUNNING SELECTOR TO GET WISHLIST NR: ', wishlistId);
+
+    return listing;
+});
