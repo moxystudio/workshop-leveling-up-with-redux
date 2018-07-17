@@ -33,8 +33,12 @@ export class WishlistEntry extends Component {
     return (state, { wishlistId }) => ({
         wishlistData: getWishlist(state, wishlistId),
     });
-};
+}; */
 
-export default connect(mapStateToProps)(WishlistEntry); */
+/* export const mapStateToProps = (state, { wishlistId }) => ({
+    wishlistData: selectors.getWishlist(state, wishlistId),
+}); */
+
+// export default connect(mapStateToProps)(WishlistEntry);
 
 export default WishlistEntry;
