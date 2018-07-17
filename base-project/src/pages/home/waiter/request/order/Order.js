@@ -8,11 +8,12 @@ import menu from 'shared/constants/menu';
 import styles from './Order.css';
 
 class Order extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+        const usedTables = props.tables.find((table) => table.guests > 0);
 
         this.state = {
-            tableId: 0,
+            tableId: usedTables && usedTables.id,
             order: {
                 items: {},
                 total: 0,
