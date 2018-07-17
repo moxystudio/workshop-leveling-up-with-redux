@@ -7,15 +7,22 @@ import styles from './Sit.css';
 class Sit extends Component {
     constructor(props) {
         super(props);
+        const availableTable = props.tables.find((table) => table.guests === 0);
+
+        this.state = {
+            tableId: availableTable && availableTable.id,
+            numberOfGuests: 1,
+        };
         this.handleTableChange = this.handleTableChange.bind(this);
         this.handleGuestsChange = this.handleGuestsChange.bind(this);
+        this.handleSitClick = this.handleSitClick.bind(this);
     }
 
     render() {
         const { tables } = this.props;
+        const availableTables = tables.filter((table) => table.guests === 0);
 
-        // TODO: Need to check if all tables have guests
-        if (!tables.length) {
+        if (!availableTables.length) {
             return (
                 <div>
                     You will have to wait for a new table to be available.
@@ -28,33 +35,49 @@ class Sit extends Component {
                 <div className={ styles.header }>
                     Select your table:
                 </div>
-                <select className={ styles.dropdown }
+                <select
+                    className={ styles.dropdown }
                     onChange={ this.handleTableChange }>
-                    <option value="one">One</option>
-                    <option value="two">Two</option>
-                    <option value="three">Three</option>
-                    <option value="four">Four</option>
+                    { availableTables.map((table) => (
+                        <option key={ table.id }
+                            value={ table.id }>
+                            { table.id + 1 }
+                        </option>
+                    )) }
                 </select>
                 <select className={ styles.dropdown }
                     onChange={ this.handleGuestsChange }>
-                    <option value="one">One</option>
-                    <option value="two">Two</option>
-                    <option value="three">Three</option>
-                    <option value="four">Four</option>
+                    <option value={ 1 }>One Guest</option>
+                    <option value={ 2 }>Two Guests</option>
+                    <option value={ 3 }>Three Guests</option>
+                    <option value={ 4 }>Four Guests</option>
                 </select>
-                <Button>
+                <Button onClick={ this.handleSitClick }>
                     SIT
                 </Button>
             </div>
         );
     }
 
-    handleGuestsChange() {
-        console.log('request changed');
+    handleSitClick() {
+        const { tables, onNewGuests } = this.props;
+        const { tableId, numberOfGuests } = this.state;
+        const availableTable = tables.find((table) => table.guests === 0 && table.id !== tableId);
+
+        availableTable && this.setState({ tableId: availableTable.id });
+        onNewGuests && onNewGuests(tableId, numberOfGuests);
     }
 
-    handleTableChange() {
-        console.log('table changed');
+    handleGuestsChange(e) {
+        this.setState({
+            numberOfGuests: Number(e.target.value),
+        });
+    }
+
+    handleTableChange(e) {
+        this.setState({
+            tableId: Number(e.target.value),
+        });
     }
 
     static propTypes = {

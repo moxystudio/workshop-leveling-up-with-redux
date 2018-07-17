@@ -53,7 +53,6 @@ class Waiter extends PureComponent {
     }
 
     handleRequestChange(event) {
-        console.log('event', event);
         this.setState({ requestType: event.target.value });
     }
 
