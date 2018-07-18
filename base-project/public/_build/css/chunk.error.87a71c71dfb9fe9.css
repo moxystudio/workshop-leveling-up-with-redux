@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Custom media queries
+   ========================================================================== */
+/* Use it like so: @media (--layout-small) { ... } */
+/* Use these if you developing desktop first and want to target lower resolutions */
+/* Use these if you are developing mobile first and want to target higher resolutions */
+/* Use these to target a specific range */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/*
+   See: https://davidwalsh.name/sass-color-variables-dont-suck
+        http://chir.ag/projects/name-that-color
+*/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/* ==========================================================================
+   Layout vars
+   ========================================================================== */
+:root {
+    /* Header
+       ============================================= */
+
+    /* Spacing around main contents of the website
+       ============================================= */
+}
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+.InternalError__internal-error-page___1AshG- {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
+        background-color: #f7f7f7;
+    }
+.InternalError__container___3K4d4- {
+        padding: 30px;
+    }
+@media (max-width: 768px) {
+    .InternalError__container___3K4d4- {
+        padding: 30px 10px;
+    }
+}
+
+/* ==========================================================================
+   Custom media queries
+   ========================================================================== */
+/* Use it like so: @media (--layout-small) { ... } */
+/* Use these if you developing desktop first and want to target lower resolutions */
+/* Use these if you are developing mobile first and want to target higher resolutions */
+/* Use these to target a specific range */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/*
+   See: https://davidwalsh.name/sass-color-variables-dont-suck
+        http://chir.ag/projects/name-that-color
+*/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/* ==========================================================================
+   Layout vars
+   ========================================================================== */
+:root {
+    /* Header
+       ============================================= */
+
+    /* Spacing around main contents of the website
+       ============================================= */
+}
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+.NotFound__not-found-page___36wsz- {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
+        background-color: #f7f7f7;
+    }
+.NotFound__container___12Yl_- {
+        padding: 30px;
+    }
+@media (max-width: 768px) {
+    .NotFound__container___12Yl_- {
+        padding: 30px 10px;
+    }
+}
+
+
+/*# sourceMappingURL=chunk.error.87a71c71dfb9fe9.css.map*/

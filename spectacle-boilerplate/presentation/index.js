@@ -36,7 +36,8 @@ const theme = createTheme({
     primary: "white",
     secondary: "#2932d3",
     tertiary: "#03A9FC",
-    quarternary: "#CECECE"
+    quarternary: "#CECECE",
+    quintenary: "#f54e50"
 }, {
     primary: "Montserrat",
     secondary: "Helvetica"
@@ -46,7 +47,7 @@ export default class Presentation extends React.Component {
     render() {
         return (
             <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-                <Slide transition={["zoom"]} bgColor="primary">
+                <Slide transition={["zoom"]} bgImage={images.superMario.replace("/", "")} bgDarken={0.8}>
                     <Cover />
                 </Slide>
                 <Slide transition={["spin"]} bgImage={images.thinking.replace("/", "")} bgDarken={0.75}>

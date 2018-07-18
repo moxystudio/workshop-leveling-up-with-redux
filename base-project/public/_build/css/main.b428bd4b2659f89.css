@@ -1,0 +1,1301 @@
+/* ==========================================================================
+   Custom media queries
+   ========================================================================== */
+/* Use it like so: @media (--layout-small) { ... } */
+/* Use these if you developing desktop first and want to target lower resolutions */
+/* Use these if you are developing mobile first and want to target higher resolutions */
+/* Use these to target a specific range */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/*
+   See: https://davidwalsh.name/sass-color-variables-dont-suck
+        http://chir.ag/projects/name-that-color
+*/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/* ==========================================================================
+   Layout vars
+   ========================================================================== */
+:root {
+    /* Header
+       ============================================= */
+
+    /* Spacing around main contents of the website
+       ============================================= */
+}
+.Svg__svg___3fdZQ- {
+    width: 24px;
+    height: 24px; /* Must have an height otherwise it will have an extra space on IE11 */
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: fill 0.2s, fill-opacity 0.2s;
+    transition: fill 0.2s, fill-opacity 0.2s;
+    fill: #280d45;
+}
+.Svg__svg___3fdZQ- svg {
+    width: inherit;
+    height: inherit;
+    display: block;  /* Remove little margin between the svg and its parent */
+}
+
+/* ==========================================================================
+   Custom media queries
+   ========================================================================== */
+/* Use it like so: @media (--layout-small) { ... } */
+/* Use these if you developing desktop first and want to target lower resolutions */
+/* Use these if you are developing mobile first and want to target higher resolutions */
+/* Use these to target a specific range */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/*
+   See: https://davidwalsh.name/sass-color-variables-dont-suck
+        http://chir.ag/projects/name-that-color
+*/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/* ==========================================================================
+   Layout vars
+   ========================================================================== */
+:root {
+    /* Header
+       ============================================= */
+
+    /* Spacing around main contents of the website
+       ============================================= */
+}
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+.Header__header___1Qhom- {
+    max-width: 80vw;
+    height: 150px;
+    z-index: 5;
+    padding: 10px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+@media (max-width: 768px) {
+    .Header__header___1Qhom- {
+    padding: 10px 10px;
+    }
+}
+/* ==========================================================================
+   Logo
+   ========================================================================== */
+.Header__logo___tYJAQ- {
+    color: #2932d3;
+    font-size: 30px;
+    font-weight: 600
+}
+.Header__logo___tYJAQ- .Header__svg___3qeIK- {
+    width: 165px;
+    height: 91px;
+}
+
+/* stylelint-disable */
+
+/*!
+ * Bootstrap Reboot v4.0.0-beta.2 (https://getbootstrap.com)
+ * Copyright 2011-2017 The Bootstrap Authors
+ * Copyright 2011-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+ */
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+    color: #212529;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.5;
+}
+
+[tabindex="-1"]:focus {
+    outline: 0 !important;
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+}
+
+abbr[title],
+abbr[data-original-title] {
+    border-bottom: 0;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+address {
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin-left: 0;
+    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
+}
+
+blockquote {
+    margin: 0 0 16px;
+    margin: 0 0 1rem;
+}
+
+dfn {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    position: relative;
+    vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+a {
+    background-color: transparent;
+    color: #007bff;
+    text-decoration: none;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+    outline: 0;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+pre {
+    overflow: auto;
+    margin-top: 0;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+    -ms-overflow-style: scrollbar;
+}
+
+figure {
+    margin: 0 0 16px;
+    margin: 0 0 1rem;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+a,
+area,
+button,
+[role="button"],
+input:not([type="range"]),
+label,
+select,
+summary,
+textarea {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    padding-top: 12px;
+    padding-top: 0.75rem;
+    padding-bottom: 12px;
+    padding-bottom: 0.75rem;
+    color: #868e96;
+    text-align: left;
+    caption-side: bottom;
+}
+
+th {
+    text-align: inherit;
+}
+
+label {
+    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+button {
+    border-radius: 0;
+}
+
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+    -webkit-appearance: listbox;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+legend {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
+    padding: 0;
+    display: block;
+    color: inherit;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: inherit;
+    white-space: normal;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    outline-offset: -2px;
+    -webkit-appearance: none;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: button;
+}
+
+output {
+    display: inline-block;
+}
+
+summary {
+    display: list-item;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ==========================================================================
+   Document
+   ========================================================================== */
+
+/*
+   1. Stretch <html> to fill our screen height
+   2. Make children of html (body) occupy at least 100% of the screen
+   3. Viewport is scalable and occupies at least 320px (iPhone 5)
+*/
+
+html {
+    min-width: 320px;
+    height: 0; /* 3 */
+    min-height: 100%; /* 1 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* 2 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* 2 */
+}
+
+/* ==========================================================================
+   Body & #root
+   ========================================================================== */
+
+/*
+   1. Force scroll always to prevent scrollbars to appear/disappear based on the page contents
+   2. Make sure that we occupy 100% of our parent and allow our child elements to do the same
+   3. Needed for IE11 otherwise flex wouldn't grow vertically, see https://stackoverflow.com/a/42930574
+*/
+
+body {
+    overflow-y: scroll;  /* 1 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* 2 */
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;  /* 2 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;  /* 2 */
+}
+
+#root {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;  /* 2 */
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; /* 2 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;  /* 2 */
+}
+
+/* ==========================================================================
+   Custom media queries
+   ========================================================================== */
+
+/* Use it like so: @media (--layout-small) { ... } */
+
+/* Use these if you developing desktop first and want to target lower resolutions */
+
+/* Use these if you are developing mobile first and want to target higher resolutions */
+
+/* Use these to target a specific range */
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+/*
+   See: https://davidwalsh.name/sass-color-variables-dont-suck
+        http://chir.ag/projects/name-that-color
+*/
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/* ==========================================================================
+   Layout vars
+   ========================================================================== */
+
+:root {
+    /* Header
+       ============================================= */
+
+    /* Spacing around main contents of the website
+       ============================================= */
+}
+
+/* ==========================================================================
+  Smooth & sharp mixins
+  ========================================================================== */
+
+/* ==========================================================================
+  Ellipsis mixin
+  ========================================================================== */
+
+/* The container needs to have a width for it to work */
+
+/* ==========================================================================
+   Fonts
+
+   If you are going to include custom fonts please use the /shared/media/fonts
+   directory.
+   ========================================================================== */
+
+/* @font-face {
+    font-family: "CustomFont";
+    font-weight: 800;
+    font-style: normal;
+    src:
+         url("shared/media/fonts/custom-font/CustomFont.woff2") format("woff2"),
+         url("shared/media/fonts/custom-font/CustomFont.woff") format("woff"),
+         url("shared/media/fonts/custom-font/CustomFont.eot") format("embedded-opentype"),
+ } */
+
+/* ==========================================================================
+   Typography Defaults
+   ========================================================================== */
+
+body {
+    color: #280d45;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    word-wrap: break-word;  /* Break long words by default */
+}
+
+::-moz-selection {
+    background: rgb(62, 20, 107);
+    color: #fff;
+}
+
+::selection {
+    background: rgb(62, 20, 107);
+    color: #fff;
+}
+
+strong {
+    font-weight: 500;
+}
+
+/* ==========================================================================
+  Links
+  ========================================================================== */
+
+a {
+    color: #ed3251;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #ed3251;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+  Headings
+  ========================================================================== */
+
+h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+h2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+h3 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+h4 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+h5 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+h6 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+#App__nprogress___3mna_- {
+    pointer-events: none;  /* Make clicks pass-through */
+}
+
+#App__nprogress___3mna_- .App__bar___2fNlN- {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 1031;
+    background: #ed3251;
+}
+
+#App__nprogress___3mna_- .App__peg___3-Xpc- {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    -webkit-transform: rotate(3deg) translate(0, -4px);
+            transform: rotate(3deg) translate(0, -4px);
+    opacity: 1;
+    -webkit-box-shadow: 0 0 10px #ed3251, 0 0 5px #ed3251;
+            box-shadow: 0 0 10px #ed3251, 0 0 5px #ed3251;
+}
+
+/* ==========================================================================
+   Make the <main> content ocupy the remaining space between the header and footer
+   ========================================================================== */
+
+html {
+    /* Put background color also in html because of macOS/iOS elastic scroll */
+    background-color: #f7f7f7;
+}
+
+body {
+    /* Put background color also in html because of macOS/iOS elastic scroll */
+    background-color: #f7f7f7;
+}
+
+.App__app___NghkZ- {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.App__header___hwRc6- {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+}
+
+.App__footer___1fwnD- {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+}
+
+/* ==========================================================================
+   Custom media queries
+   ========================================================================== */
+/* Use it like so: @media (--layout-small) { ... } */
+/* Use these if you developing desktop first and want to target lower resolutions */
+/* Use these if you are developing mobile first and want to target higher resolutions */
+/* Use these to target a specific range */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/*
+   See: https://davidwalsh.name/sass-color-variables-dont-suck
+        http://chir.ag/projects/name-that-color
+*/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/* ==========================================================================
+   Layout vars
+   ========================================================================== */
+:root {
+    /* Header
+       ============================================= */
+
+    /* Spacing around main contents of the website
+       ============================================= */
+}
+.Bench__bench___1jxaf- {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #9bddb5;
+    border-radius: 50%;
+}
+.Bench__top___2xDFJ- {
+    top: -50px;
+}
+.Bench__bottom___1cucb- {
+    bottom: -50px;
+}
+.Bench__right___ofxY7- {
+    right: 50px;
+}
+.Bench__left___1smJp- {
+    left: 50px;
+}
+.Bench__is-taken___e3sCJ- {
+    background-color: #fe765f;
+}
+
+/* ==========================================================================
+   Custom media queries
+   ========================================================================== */
+/* Use it like so: @media (--layout-small) { ... } */
+/* Use these if you developing desktop first and want to target lower resolutions */
+/* Use these if you are developing mobile first and want to target higher resolutions */
+/* Use these to target a specific range */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/*
+   See: https://davidwalsh.name/sass-color-variables-dont-suck
+        http://chir.ag/projects/name-that-color
+*/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/* ==========================================================================
+   Layout vars
+   ========================================================================== */
+:root {
+    /* Header
+       ============================================= */
+
+    /* Spacing around main contents of the website
+       ============================================= */
+}
+.Table__container___2Bosl- {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+}
+.Table__table___3gFvi- {
+    position: relative;
+    width: 50%;
+    max-width: 200px;
+    min-height: 140px;
+    margin: 75px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center
+}
+.Table__table___3gFvi-::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    bottom: -19px;
+    left: -19px;
+    opacity: 0.21;
+    background-color: #dddfe7;
+    border-radius: 4px;
+}
+.Table__table___3gFvi-::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #dddfe7;
+    border-radius: 4px;
+}
+.Table__table___3gFvi- .Table__price___2-CNY- {
+    z-index: 1;
+    font-size: 36px;
+    font-weight: 600;
+}
+.Table__table___3gFvi- .Table__id___1H5Ds- {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    font-size: 16px;
+}
+
+.Room__room___3oYIu- {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Custom media queries
+   ========================================================================== */
+/* Use it like so: @media (--layout-small) { ... } */
+/* Use these if you developing desktop first and want to target lower resolutions */
+/* Use these if you are developing mobile first and want to target higher resolutions */
+/* Use these to target a specific range */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/*
+   See: https://davidwalsh.name/sass-color-variables-dont-suck
+        http://chir.ag/projects/name-that-color
+*/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/* ==========================================================================
+   Layout vars
+   ========================================================================== */
+:root {
+    /* Header
+       ============================================= */
+
+    /* Spacing around main contents of the website
+       ============================================= */
+}
+/* stylelint-disable */
+.Button__button___1P_YF- {
+
+    will-change: background, color;
+    position: relative;
+    width: 100%;
+    height: 35px;
+    padding: 0;
+    background: #fff;
+    border-radius: 4px;
+    color: #000;
+    cursor: pointer;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none
+}
+.Button__button___1P_YF-:active, .Button__button___1P_YF-:focus, .Button__button___1P_YF-:visited, .Button__button___1P_YF-:hover {
+
+    outline: none;
+}
+.Button__button___1P_YF-:hover {
+
+    background: #fe765f;
+}
+.Button__button___1P_YF-.Button__disabled___3Sb8b- {
+    opacity: 0.8;
+    cursor: not-allowed
+}
+.Button__button___1P_YF-.Button__disabled___3Sb8b-:hover {
+
+    background: none;
+}
+/* stylelint-enable */
+
+.Leave__leave___x_d1N- .Leave__header___2DrgC- {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.Leave__leave___x_d1N- .Leave__dropdown___ct-SN- {
+    width: 100%;
+    height: 22px;
+    margin-bottom: 30px;
+}
+
+.Item__item___GNdS6- {
+    margin: 20px 0;
+}
+
+.Item__image___bmuGR- {
+    max-width: 25vw;
+}
+
+.Order__order___4jFwC- {
+    height: 70%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.Order__dropdown___KlGgC- {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.Sit__sit___1uJHJ- .Sit__header___1YI35- {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.Sit__sit___1uJHJ- .Sit__dropdown___3e_9M- {
+    width: 100%;
+    height: 22px;
+    margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   Custom media queries
+   ========================================================================== */
+/* Use it like so: @media (--layout-small) { ... } */
+/* Use these if you developing desktop first and want to target lower resolutions */
+/* Use these if you are developing mobile first and want to target higher resolutions */
+/* Use these to target a specific range */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/*
+   See: https://davidwalsh.name/sass-color-variables-dont-suck
+        http://chir.ag/projects/name-that-color
+*/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/* ==========================================================================
+   Layout vars
+   ========================================================================== */
+:root {
+    /* Header
+       ============================================= */
+
+    /* Spacing around main contents of the website
+       ============================================= */
+}
+.Drawer__drawer___1IEd8- {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30vw;
+    z-index: 10;
+    padding: 39px;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    background-color: #f1f1f1;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+.Drawer__drawer___1IEd8-.Drawer__open___370U1- {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+}
+
+/* ==========================================================================
+   Custom media queries
+   ========================================================================== */
+/* Use it like so: @media (--layout-small) { ... } */
+/* Use these if you developing desktop first and want to target lower resolutions */
+/* Use these if you are developing mobile first and want to target higher resolutions */
+/* Use these to target a specific range */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/*
+   See: https://davidwalsh.name/sass-color-variables-dont-suck
+        http://chir.ag/projects/name-that-color
+*/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/* ==========================================================================
+   Layout vars
+   ========================================================================== */
+:root {
+    /* Header
+       ============================================= */
+
+    /* Spacing around main contents of the website
+       ============================================= */
+}
+.Waiter__waiter___2n_Wl- {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: url(/_build/images/waiter.5340f39f9a89d35.jpg) -300px center no-repeat
+}
+.Waiter__waiter___2n_Wl- .Waiter__title___2-gj5- {
+    z-index: 1;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 600;
+    pointer-events: none;
+}
+.Waiter__waiter___2n_Wl-::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.91;
+    background: #fe765f;
+    background-size: cover;
+}
+.Waiter__waiter___2n_Wl- .Waiter__waiter-drawer___1P-ss- .Waiter__drawer-title___1ZuIi- {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.Waiter__waiter___2n_Wl- .Waiter__waiter-drawer___1P-ss- .Waiter__dropdown___rGsMh- {
+    width: 100%;
+    height: 22px;
+    margin-bottom: 30px;
+}
+
+.Cooking__plate___Xz1HG- {
+    margin: 20px 0;
+}
+
+.Cooking__image___2V-_w- {
+    max-width: 25vw;
+}
+
+/* ==========================================================================
+   Custom media queries
+   ========================================================================== */
+/* Use it like so: @media (--layout-small) { ... } */
+/* Use these if you developing desktop first and want to target lower resolutions */
+/* Use these if you are developing mobile first and want to target higher resolutions */
+/* Use these to target a specific range */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/*
+   See: https://davidwalsh.name/sass-color-variables-dont-suck
+        http://chir.ag/projects/name-that-color
+*/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/* ==========================================================================
+   Layout vars
+   ========================================================================== */
+:root {
+    /* Header
+       ============================================= */
+
+    /* Spacing around main contents of the website
+       ============================================= */
+}
+.Kitchen__kitchen___b02Bk- {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: url(/_build/images/kitchen.1b90b81c63fbe09.jpg) -300px center no-repeat
+}
+.Kitchen__kitchen___b02Bk- .Kitchen__title___2UIB-- {
+    z-index: 1;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 600;
+    pointer-events: none;
+}
+.Kitchen__kitchen___b02Bk-::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.91;
+    background: #0c2765;
+    background-size: cover;
+}
+.Kitchen__kitchen___b02Bk- .Kitchen__kitchen-drawer___3_Mkb- .Kitchen__drawer-title___2hcBX- {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.Kitchen__kitchen___b02Bk- .Kitchen__kitchen-drawer___3_Mkb- .Kitchen__dropdown___2VWAi- {
+    width: 100%;
+    height: 22px;
+    margin-bottom: 30px;
+}
+.Kitchen__plates___3EVAx- {
+    height: 70%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.Kitchen__plate___2jJ14- {
+    height: auto;
+    opacity: 1;
+}
+.Kitchen__plate___2jJ14-.Kitchen__hidden___YzeQC- {
+    height: 0;
+    opacity: 0;
+}
+
+/* ==========================================================================
+   Custom media queries
+   ========================================================================== */
+/* Use it like so: @media (--layout-small) { ... } */
+/* Use these if you developing desktop first and want to target lower resolutions */
+/* Use these if you are developing mobile first and want to target higher resolutions */
+/* Use these to target a specific range */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/*
+   See: https://davidwalsh.name/sass-color-variables-dont-suck
+        http://chir.ag/projects/name-that-color
+*/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/* ==========================================================================
+   Layout vars
+   ========================================================================== */
+:root {
+    /* Header
+       ============================================= */
+
+    /* Spacing around main contents of the website
+       ============================================= */
+}
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+.Home__home-page___2M1wt- {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
+        background-color: #f7f7f7;
+    }
+.Home__container___3QBeR- {
+        padding: 30px;
+    }
+@media (max-width: 768px) {
+    .Home__container___3QBeR- {
+        padding: 30px 10px;
+    }
+}
+.Home__home-page___2M1wt- {
+    position: relative
+}
+.Home__home-page___2M1wt- .Home__container___3QBeR- {
+    width: 80vw;
+}
+.Home__home-page___2M1wt- .Home__container___3QBeR- .Home__welcoming___2TG8s- {
+    font-size: 33px;
+    font-weight: 600;
+}
+.Home__home-page___2M1wt- .Home__container___3QBeR- .Home__demo___1Na4u- {
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: none;
+}
+.Home__home-page___2M1wt- .Home__side-container___9lNkf- {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 20vw;
+}
+.Home__home-page___2M1wt- .Home__side-container___9lNkf- .Home__waiter___1DmGV- {
+    height: 50%;
+}
+.Home__home-page___2M1wt- .Home__side-container___9lNkf- .Home__kitchen___1MR7N- {
+    height: 50%;
+}
+
+
+/*# sourceMappingURL=main.b428bd4b2659f89.css.map*/

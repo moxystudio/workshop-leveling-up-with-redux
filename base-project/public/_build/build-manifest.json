@@ -1,0 +1,36 @@
+{
+    "hash": "b428bd4b2659f89dfd50",
+    "publicPath": "/_build/",
+    "assets": {
+        "js": [
+            {
+                "file": "js/main.cb3ca73051db9e5.js",
+                "url": "/_build/js/main.cb3ca73051db9e5.js"
+            }
+        ],
+        "css": [
+            {
+                "file": "css/main.b428bd4b2659f89.css",
+                "url": "/_build/css/main.b428bd4b2659f89.css"
+            }
+        ],
+        "secondary": [
+            {
+                "file": "css/chunk.error.87a71c71dfb9fe9.css",
+                "url": "/_build/css/chunk.error.87a71c71dfb9fe9.css"
+            },
+            {
+                "file": "js/chunk.error.87a71c71dfb9fe9.js",
+                "url": "/_build/js/chunk.error.87a71c71dfb9fe9.js"
+            },
+            {
+                "file": "images/svg-sprite.9261ff4f76b1d15.svg",
+                "url": "/_build/images/svg-sprite.9261ff4f76b1d15.svg"
+            }
+        ]
+    },
+    "server": {
+        "hash": "85b6592fd189767235bf",
+        "file": "server-bundle.js"
+    }
+}
