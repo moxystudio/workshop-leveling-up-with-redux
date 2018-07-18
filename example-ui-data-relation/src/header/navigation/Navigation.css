@@ -14,13 +14,13 @@
 }
 
 .link {
-    color: #fff;
+    color: #000;
     font-size: 14px;
     text-transform: uppercase;
 }
 
 .link:hover,
 .link.is-active {
-    color: var(--color-alabaster);
+    color: color(var(--color-alabaster) blackness(40%));
     text-decoration: underline;
 }
